@@ -13,11 +13,13 @@ func _ready() -> void:
 
 
 func handle_new_day(current_day: int) -> void:
+	card_pool.append_array(available_cards)
+	available_cards.resize(0)
 	var card_pool_copy : Array[RCard] = card_pool.duplicate()
 	for card : RCard in card_pool_copy:
 		if card.min_day >= current_day:
 			available_cards.append(card)
-	card_pool = card_pool_copy
+			card_pool.erase(card)
 
 func get_card() -> RCard:
 	return available_cards.pick_random()
