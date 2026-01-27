@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_ydtme"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_hq6by"]
+
+[sub_resource type="Resource" id="Resource_ydtme"]
+script = ExtResource("1_ydtme")
+value = 12
+
+[sub_resource type="Resource" id="Resource_hq6by"]
+script = ExtResource("1_ydtme")
+value = 4
+
+[sub_resource type="Resource" id="Resource_14xwp"]
+script = ExtResource("1_ydtme")
+value = -10
+
+[sub_resource type="Resource" id="Resource_l60ds"]
+script = ExtResource("1_ydtme")
+value = -18
+
+[resource]
+script = ExtResource("2_hq6by")
+message = "{employee_name} requests protective equipment upgrades after noticing defects in the current masks used internally."
+accept_consequences = Array[ExtResource("1_ydtme")]([SubResource("Resource_ydtme"), SubResource("Resource_hq6by"), SubResource("Resource_14xwp")])
+reject_consequences = Array[ExtResource("1_ydtme")]([SubResource("Resource_l60ds")])
+min_day = 8

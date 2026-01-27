@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_08axq"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_0pde8"]
+
+[sub_resource type="Resource" id="Resource_08axq"]
+script = ExtResource("1_08axq")
+value = 10
+
+[sub_resource type="Resource" id="Resource_0pde8"]
+script = ExtResource("1_08axq")
+value = -2
+
+[sub_resource type="Resource" id="Resource_ic607"]
+script = ExtResource("1_08axq")
+value = -15
+
+[resource]
+script = ExtResource("2_0pde8")
+message = "{employee_name} asks for a single unpaid day off to attend a family funeral. They already missed their quota this week."
+accept_consequences = Array[ExtResource("1_08axq")]([SubResource("Resource_08axq"), SubResource("Resource_0pde8")])
+reject_consequences = Array[ExtResource("1_08axq")]([SubResource("Resource_ic607")])
+min_day = 1

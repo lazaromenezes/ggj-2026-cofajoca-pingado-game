@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_cr720"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_12a8a"]
+
+[sub_resource type="Resource" id="Resource_cr720"]
+script = ExtResource("1_cr720")
+value = 15
+
+[sub_resource type="Resource" id="Resource_12a8a"]
+script = ExtResource("1_cr720")
+value = -9
+
+[sub_resource type="Resource" id="Resource_u68q6"]
+script = ExtResource("1_cr720")
+value = -28
+
+[resource]
+script = ExtResource("2_12a8a")
+message = "{employee_name} requests confirmation that their family will be compensated if exposure leads to long-term illness."
+accept_consequences = Array[ExtResource("1_cr720")]([SubResource("Resource_cr720"), SubResource("Resource_12a8a")])
+reject_consequences = Array[ExtResource("1_cr720")]([SubResource("Resource_u68q6")])
+min_day = 9

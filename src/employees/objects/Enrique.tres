@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://s3vr241pkrkp"]
+
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_d6b1y"]
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_sw5lg"]
+
+[sub_resource type="Resource" id="Resource_yvwho"]
+script = ExtResource("1_sw5lg")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_d6b1y")
+name = "Enrique Navarro"
+age = 59
+description = "Knows labor law better than management expects. Quietly talks to coworkers during breaks."
+satisfaction_data = SubResource("Resource_yvwho")
+experience_years = 33
+background = "Former dockworker turned factory employee after port privatization."
+education_level = "High School"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

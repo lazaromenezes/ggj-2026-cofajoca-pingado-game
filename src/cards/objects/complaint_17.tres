@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_d38m6"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_hboqr"]
+
+[sub_resource type="Resource" id="Resource_d38m6"]
+script = ExtResource("1_d38m6")
+value = 14
+
+[sub_resource type="Resource" id="Resource_hboqr"]
+script = ExtResource("1_d38m6")
+value = -4
+
+[sub_resource type="Resource" id="Resource_l1g5g"]
+script = ExtResource("1_d38m6")
+value = -22
+
+[resource]
+script = ExtResource("2_hboqr")
+message = "{employee_name} reports numbness in their hands after repeated exposure and asks to rotate tasks."
+accept_consequences = Array[ExtResource("1_d38m6")]([SubResource("Resource_d38m6"), SubResource("Resource_hboqr")])
+reject_consequences = Array[ExtResource("1_d38m6")]([SubResource("Resource_l1g5g")])
+min_day = 4

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://dd0886lphmrxr"]
+
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_qnjdp"]
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_vea40"]
+
+[sub_resource type="Resource" id="Resource_0c50f"]
+script = ExtResource("1_vea40")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_qnjdp")
+name = "Ana Paula Moreira"
+age = 36
+description = "Flags defects that rarely get fixed. Her reports are thorough, archived, and ignored."
+satisfaction_data = SubResource("Resource_0c50f")
+experience_years = 11
+background = "Transferred internally after raising concerns about filtration failures."
+education_level = "Bachelor's Degree"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

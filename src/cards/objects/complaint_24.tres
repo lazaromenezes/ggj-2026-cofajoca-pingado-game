@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_w67pw"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_1pb0d"]
+
+[sub_resource type="Resource" id="Resource_w67pw"]
+script = ExtResource("1_w67pw")
+value = 19
+
+[sub_resource type="Resource" id="Resource_1pb0d"]
+script = ExtResource("1_w67pw")
+value = -5
+
+[sub_resource type="Resource" id="Resource_fajga"]
+script = ExtResource("1_w67pw")
+value = -23
+
+[resource]
+script = ExtResource("2_1pb0d")
+message = "{employee_name} reports recurring nightmares related to emergency drills and asks for counseling support."
+accept_consequences = Array[ExtResource("1_w67pw")]([SubResource("Resource_w67pw"), SubResource("Resource_1pb0d")])
+reject_consequences = Array[ExtResource("1_w67pw")]([SubResource("Resource_fajga")])
+min_day = 5

@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_nipqs"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_i8tl1"]
+
+[sub_resource type="Resource" id="Resource_nipqs"]
+script = ExtResource("1_nipqs")
+value = 18
+
+[sub_resource type="Resource" id="Resource_i8tl1"]
+script = ExtResource("1_nipqs")
+value = -6
+
+[sub_resource type="Resource" id="Resource_8b6dk"]
+script = ExtResource("1_nipqs")
+value = -24
+
+[resource]
+script = ExtResource("2_i8tl1")
+message = "{employee_name} reports persistent coughing after a containment breach and requests diagnostic testing paid by the company."
+accept_consequences = Array[ExtResource("1_nipqs")]([SubResource("Resource_nipqs"), SubResource("Resource_i8tl1")])
+reject_consequences = Array[ExtResource("1_nipqs")]([SubResource("Resource_8b6dk")])
+min_day = 3

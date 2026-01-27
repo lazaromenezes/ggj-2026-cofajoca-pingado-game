@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_y5qk6"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_om5b6"]
+
+[sub_resource type="Resource" id="Resource_y5qk6"]
+script = ExtResource("1_y5qk6")
+value = 10
+
+[sub_resource type="Resource" id="Resource_om5b6"]
+script = ExtResource("1_y5qk6")
+value = -2
+
+[sub_resource type="Resource" id="Resource_frw2m"]
+script = ExtResource("1_y5qk6")
+value = -22
+
+[sub_resource type="Resource" id="Resource_8flrp"]
+script = ExtResource("1_y5qk6")
+value = -4
+
+[resource]
+script = ExtResource("2_om5b6")
+message = "{employee_name} asks for written confirmation that the masks sold externally are safe for prolonged exposure."
+accept_consequences = Array[ExtResource("1_y5qk6")]([SubResource("Resource_y5qk6"), SubResource("Resource_om5b6")])
+reject_consequences = Array[ExtResource("1_y5qk6")]([SubResource("Resource_frw2m"), SubResource("Resource_8flrp")])
+min_day = 10

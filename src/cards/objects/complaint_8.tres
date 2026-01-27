@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_mk4g2"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_ppni8"]
+
+[sub_resource type="Resource" id="Resource_mk4g2"]
+script = ExtResource("1_mk4g2")
+value = 18
+
+[sub_resource type="Resource" id="Resource_ppni8"]
+script = ExtResource("1_mk4g2")
+value = -9
+
+[sub_resource type="Resource" id="Resource_g5g76"]
+script = ExtResource("1_mk4g2")
+value = -24
+
+[sub_resource type="Resource" id="Resource_xh0s4"]
+script = ExtResource("1_mk4g2")
+value = -2
+
+[resource]
+script = ExtResource("2_ppni8")
+message = "{employee_name} wants compensation for medical expenses they believe were caused by long-term exposure at work."
+accept_consequences = Array[ExtResource("1_mk4g2")]([SubResource("Resource_mk4g2"), SubResource("Resource_ppni8")])
+reject_consequences = Array[ExtResource("1_mk4g2")]([SubResource("Resource_g5g76"), SubResource("Resource_xh0s4")])
+min_day = 7

@@ -1,0 +1,27 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_h7oil"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_b2m73"]
+
+[sub_resource type="Resource" id="Resource_h7oil"]
+script = ExtResource("1_h7oil")
+value = 17
+
+[sub_resource type="Resource" id="Resource_b2m73"]
+script = ExtResource("1_h7oil")
+value = -5
+
+[sub_resource type="Resource" id="Resource_wymw0"]
+script = ExtResource("1_h7oil")
+value = -26
+
+[sub_resource type="Resource" id="Resource_rk8fb"]
+script = ExtResource("1_h7oil")
+value = -2
+
+[resource]
+script = ExtResource("2_b2m73")
+message = "{employee_name} asks for paid time to attend a mandatory medical follow-up required by government guidelines."
+accept_consequences = Array[ExtResource("1_h7oil")]([SubResource("Resource_h7oil"), SubResource("Resource_b2m73")])
+reject_consequences = Array[ExtResource("1_h7oil")]([SubResource("Resource_wymw0"), SubResource("Resource_rk8fb")])
+min_day = 5

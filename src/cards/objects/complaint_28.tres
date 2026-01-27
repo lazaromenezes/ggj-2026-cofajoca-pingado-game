@@ -1,0 +1,23 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_4uqea"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_tauix"]
+
+[sub_resource type="Resource" id="Resource_4uqea"]
+script = ExtResource("1_4uqea")
+value = 11
+
+[sub_resource type="Resource" id="Resource_tauix"]
+script = ExtResource("1_4uqea")
+value = -2
+
+[sub_resource type="Resource" id="Resource_ju7yh"]
+script = ExtResource("1_4uqea")
+value = -17
+
+[resource]
+script = ExtResource("2_tauix")
+message = "{employee_name} quietly asks if refusing overtime will put their job at risk."
+accept_consequences = Array[ExtResource("1_4uqea")]([SubResource("Resource_4uqea"), SubResource("Resource_tauix")])
+reject_consequences = Array[ExtResource("1_4uqea")]([SubResource("Resource_ju7yh")])
+min_day = 2
