@@ -9,6 +9,7 @@ value = 14
 
 [sub_resource type="Resource" id="Resource_yxni3"]
 script = ExtResource("1_14vrr")
+target = 3
 value = -3
 
 [sub_resource type="Resource" id="Resource_d56rr"]

@@ -9,6 +9,7 @@ value = 18
 
 [sub_resource type="Resource" id="Resource_ckpyd"]
 script = ExtResource("1_ofkon")
+target = 1
 value = -8
 
 [sub_resource type="Resource" id="Resource_ogp0g"]

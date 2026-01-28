@@ -1,4 +1,4 @@
-extends Node
+class_name NEmployeeManager extends Node
 
 @export var employees_path : String
 var employees : Array[OEmployee]
@@ -8,3 +8,6 @@ func _ready() -> void:
 	employee_data_list.assign(GUtils.load_resources(employees_path))
 	for employee_data in employee_data_list:
 		employees.append(OEmployee.new(employee_data))
+
+func get_available_employee() -> OEmployee:
+	return employees.pick_random()

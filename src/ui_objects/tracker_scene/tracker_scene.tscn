@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cw1hp3fnv0ihr"]
+
+[ext_resource type="Script" uid="uid://bxpw1v0f4d1qp" path="res://src/ui_objects/tracker_scene/tracker_scene.gd" id="1_fcy5f"]
+
+[node name="Tracker" type="GridContainer" unique_id=1105491028]
+size_flags_vertical = 2
+columns = 2
+script = ExtResource("1_fcy5f")
+
+[node name="Label4" type="Label" parent="." unique_id=1893727007]
+layout_mode = 2
+text = "Day: "
+
+[node name="Day" type="Label" parent="." unique_id=1180352611]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label" type="Label" parent="." unique_id=846155083]
+layout_mode = 2
+text = "Budget: "
+
+[node name="Budget" type="Label" parent="." unique_id=1166402414]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label2" type="Label" parent="." unique_id=2025599824]
+layout_mode = 2
+text = "Workers: "
+
+[node name="Workers" type="Label" parent="." unique_id=2030001297]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Label3" type="Label" parent="." unique_id=1732624133]
+layout_mode = 2
+text = "Public:"
+
+[node name="Public" type="Label" parent="." unique_id=1694151184]
+unique_name_in_owner = true
+layout_mode = 2

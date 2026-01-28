@@ -8,8 +8,7 @@ var available_cards : Array[RCard]
 
 func _ready() -> void:
 	card_pool.assign(GUtils.load_resources(card_pool_path))
-	date_manager.on_advance_day.connect(handle_new_day)
-
+	date_manager.day_advanced.connect(handle_new_day)
 
 
 func handle_new_day(current_day: int) -> void:

@@ -1,9 +1,0 @@
-[gd_resource type="Resource" script_class="Suggestion" format=3 uid="uid://dsy7whadr1tlf"]
-
-[ext_resource type="Script" uid="uid://ub8t84riaxpt" path="res://suggestion.gd" id="1_ueyq2"]
-
-[resource]
-script = ExtResource("1_ueyq2")
-from = "Empregado #0321"
-text = "Proposta"
-metadata/_custom_type_script = "uid://ub8t84riaxpt"

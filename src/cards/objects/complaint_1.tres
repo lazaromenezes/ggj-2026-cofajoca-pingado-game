@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="RCard" format=3]
+[gd_resource type="Resource" script_class="RCard" format=3 uid="uid://c48b17e1cwf77"]
 
-[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_xkcxh"]
-[ext_resource type="Script" path="res://src/cards/card.gd" id="2_rhiiw"]
+[ext_resource type="Script" uid="uid://bv27inp71bsog" path="res://src/cards/consequence.gd" id="1_xkcxh"]
+[ext_resource type="Script" uid="uid://d2uf8oif0nl5c" path="res://src/cards/card.gd" id="2_rhiiw"]
 
 [sub_resource type="Resource" id="Resource_xkcxh"]
 script = ExtResource("1_xkcxh")
@@ -9,6 +9,7 @@ value = 25
 
 [sub_resource type="Resource" id="Resource_rhiiw"]
 script = ExtResource("1_xkcxh")
+target = 1
 value = -8
 
 [sub_resource type="Resource" id="Resource_2ak6t"]
@@ -17,6 +18,7 @@ value = -30
 
 [sub_resource type="Resource" id="Resource_ba0gr"]
 script = ExtResource("1_xkcxh")
+target = 2
 value = -3
 
 [resource]

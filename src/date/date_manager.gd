@@ -1,12 +1,9 @@
 class_name NDateManger extends Node
 
-signal on_advance_day(day: int)
+signal day_advanced(day: int)
 
-var day := 1
-
-func _ready() -> void:
-	pass # Replace with function body.
+var day := 0
 
 func advance_day() -> void:
 	day += 1
-	on_advance_day.emit(day)
+	day_advanced.emit(day)

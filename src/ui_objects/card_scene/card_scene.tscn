@@ -1,11 +1,15 @@
 [gd_scene format=3 uid="uid://6lqtladal2uy"]
 
-[node name="EmployeeSuggestion" type="PanelContainer" unique_id=353551327]
+[ext_resource type="Script" uid="uid://b4ptur5yb6226" path="res://src/ui_objects/card_scene/card_scene.gd" id="1_kub54"]
+[ext_resource type="Script" uid="uid://ciqqruwrac5ic" path="res://src/ui_objects/card_scene/stamp_area.gd" id="2_3mk1p"]
+
+[node name="Card" type="PanelContainer" unique_id=353551327]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_kub54")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1165425009]
 layout_mode = 2
@@ -22,29 +26,29 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=946107036]
 layout_mode = 2
-text = "De: "
+text = "From: "
 
 [node name="From" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1203961068]
 unique_name_in_owner = true
 layout_mode = 2
 text = "####"
 
-[node name="Request" type="RichTextLabel" parent="MarginContainer/VBoxContainer" unique_id=26021425]
-unique_name_in_owner = true
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=94909933]
 layout_mode = 2
 size_flags_vertical = 3
+
+[node name="Complaint" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=26021425]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 bbcode_enabled = true
-text = "Proposta"
+text = "Complaint"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1582146947]
-layout_mode = 2
-
-[node name="Approve" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1183653324]
+[node name="StampArea" type="Panel" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1024149853 node_paths=PackedStringArray("card_scene")]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
-text = "Aprovar ($ %f.2) "
-
-[node name="Reject" type="Button" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1466697441]
-unique_name_in_owner = true
-layout_mode = 2
-text = "Rejeitar ($ %f.2)"
+size_flags_vertical = 8
+script = ExtResource("2_3mk1p")
+card_scene = NodePath("../../../..")

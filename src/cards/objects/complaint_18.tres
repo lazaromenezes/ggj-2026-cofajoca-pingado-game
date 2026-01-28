@@ -9,6 +9,7 @@ value = 17
 
 [sub_resource type="Resource" id="Resource_b2m73"]
 script = ExtResource("1_h7oil")
+target = 1
 value = -5
 
 [sub_resource type="Resource" id="Resource_wymw0"]
@@ -17,6 +18,7 @@ value = -26
 
 [sub_resource type="Resource" id="Resource_rk8fb"]
 script = ExtResource("1_h7oil")
+target = 3
 value = -2
 
 [resource]

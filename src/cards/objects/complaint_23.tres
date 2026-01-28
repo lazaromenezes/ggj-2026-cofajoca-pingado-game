@@ -9,6 +9,7 @@ value = 14
 
 [sub_resource type="Resource" id="Resource_y3gpv"]
 script = ExtResource("1_j11tn")
+target = 1
 value = -6
 
 [sub_resource type="Resource" id="Resource_58o4q"]
