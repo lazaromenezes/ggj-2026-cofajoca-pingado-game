@@ -4,7 +4,7 @@
 
 [node name="Tracker" type="GridContainer" unique_id=1105491028]
 size_flags_vertical = 2
-columns = 2
+columns = 8
 script = ExtResource("1_fcy5f")
 
 [node name="Label4" type="Label" parent="." unique_id=1893727007]

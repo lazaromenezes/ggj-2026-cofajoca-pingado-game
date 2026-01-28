@@ -1,7 +1,7 @@
-[gd_resource type="Resource" script_class="RCard" format=3 uid="uid://cyrw42eq1ns2v"]
+[gd_resource type="Resource" script_class="RCard" format=3]
 
-[ext_resource type="Script" uid="uid://bv27inp71bsog" path="res://src/cards/consequence.gd" id="1_dxo2q"]
-[ext_resource type="Script" uid="uid://d2uf8oif0nl5c" path="res://src/cards/card.gd" id="2_juf83"]
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_dxo2q"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_juf83"]
 
 [sub_resource type="Resource" id="Resource_dxo2q"]
 script = ExtResource("1_dxo2q")

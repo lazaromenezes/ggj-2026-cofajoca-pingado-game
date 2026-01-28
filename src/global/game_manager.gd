@@ -6,6 +6,8 @@ signal tracker_changed(tracker: Dictionary[TrackerType, float])
 @export var card_manager: NCardManager
 @export var employee_manager: NEmployeeManager
 
+@export var daily_goal: int = 6
+
 enum TrackerType {
 	COMPLAINER,
 	BUDGET,
@@ -30,12 +32,17 @@ func start() -> void:
 	current_session = Session.new()
 	current_session.day = date_manager.day
 	tracker_changed.emit(current_session.tracker)
-	
-func next_card() -> RCard:
-	return card_manager.get_card()
-	
+
+
 func next_employee() -> OEmployee:
 	return employee_manager.get_available_employee()
+
+
+func get_day_cards() -> Array[RCard]:
+	var available_cards := card_manager.available_cards.duplicate()
+	available_cards.shuffle()
+	return available_cards.slice(0, daily_goal)
+
 
 func on_card_action(consequences: Array[RConsequence]) -> void:
 	for consequence in consequences:

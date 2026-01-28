@@ -37,6 +37,11 @@ gdscript/warnings/static_called_on_instance=2
 gdscript/warnings/redundant_await=2
 gdscript/warnings/missing_await=2
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
