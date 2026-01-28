@@ -27,7 +27,6 @@ func parse_card_data(card_data: Dictionary) -> RCard:
 	card.accept_consequences = []
 	for c : Dictionary in card_data.get("accept_consequences", []):
 		var consequence := RConsequence.new()
-		
 		consequence.target = RConsequence.Target[c.get("target", 'COMPLAINER')]
 		consequence.value = c.get("value", 0)
 		card.accept_consequences.append(consequence)
