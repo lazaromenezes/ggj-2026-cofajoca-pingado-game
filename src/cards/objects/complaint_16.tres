@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_qu25d"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_fe0qm"]
+
+[sub_resource type="Resource" id="Resource_qu25d"]
+script = ExtResource("1_qu25d")
+value = 15
+
+[sub_resource type="Resource" id="Resource_fe0qm"]
+script = ExtResource("1_qu25d")
+target = 1
+value = -2
+
+[sub_resource type="Resource" id="Resource_yikqw"]
+script = ExtResource("1_qu25d")
+value = -20
+
+[resource]
+script = ExtResource("2_fe0qm")
+message = "{employee_name} asks for written assurance that medical incidents will not be used against them in performance reviews."
+accept_consequences = Array[ExtResource("1_qu25d")]([SubResource("Resource_qu25d"), SubResource("Resource_fe0qm")])
+reject_consequences = Array[ExtResource("1_qu25d")]([SubResource("Resource_yikqw")])
+min_day = 3

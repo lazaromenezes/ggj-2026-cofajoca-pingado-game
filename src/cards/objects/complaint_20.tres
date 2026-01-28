@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_ofkon"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_ckpyd"]
+
+[sub_resource type="Resource" id="Resource_ofkon"]
+script = ExtResource("1_ofkon")
+value = 18
+
+[sub_resource type="Resource" id="Resource_ckpyd"]
+script = ExtResource("1_ofkon")
+target = 1
+value = -8
+
+[sub_resource type="Resource" id="Resource_ogp0g"]
+script = ExtResource("1_ofkon")
+value = -25
+
+[resource]
+script = ExtResource("2_ckpyd")
+message = "{employee_name} asks for hazard pay after a spike in containment failures during night shifts."
+accept_consequences = Array[ExtResource("1_ofkon")]([SubResource("Resource_ofkon"), SubResource("Resource_ckpyd")])
+reject_consequences = Array[ExtResource("1_ofkon")]([SubResource("Resource_ogp0g")])
+min_day = 6

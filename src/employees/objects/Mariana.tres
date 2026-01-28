@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://dbdhq5uffogx1"]
+
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_e8lwh"]
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_vhw5e"]
+
+[sub_resource type="Resource" id="Resource_2fhr1"]
+script = ExtResource("1_vhw5e")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_e8lwh")
+name = "Mariana Pacheco"
+age = 39
+description = "Ensures the company technically follows regulations while avoiding meaningful change."
+satisfaction_data = SubResource("Resource_2fhr1")
+role = 1
+experience_years = 12
+background = "Law graduate specialized in corporate compliance."
+education_level = "Master's Degree"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

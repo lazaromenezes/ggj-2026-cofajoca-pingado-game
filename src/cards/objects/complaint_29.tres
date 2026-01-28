@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_14vrr"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_yxni3"]
+
+[sub_resource type="Resource" id="Resource_14vrr"]
+script = ExtResource("1_14vrr")
+value = 14
+
+[sub_resource type="Resource" id="Resource_yxni3"]
+script = ExtResource("1_14vrr")
+target = 3
+value = -3
+
+[sub_resource type="Resource" id="Resource_d56rr"]
+script = ExtResource("1_14vrr")
+value = -25
+
+[resource]
+script = ExtResource("2_yxni3")
+message = "{employee_name} asks for anonymity after witnessing a supervisor override safety protocols."
+accept_consequences = Array[ExtResource("1_14vrr")]([SubResource("Resource_14vrr"), SubResource("Resource_yxni3")])
+reject_consequences = Array[ExtResource("1_14vrr")]([SubResource("Resource_d56rr")])
+min_day = 7

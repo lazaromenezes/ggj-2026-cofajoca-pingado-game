@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://du87ts7paqhlg"]
+
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_3o1rb"]
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_wlt41"]
+
+[sub_resource type="Resource" id="Resource_jay5v"]
+script = ExtResource("1_wlt41")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_3o1rb")
+name = "Luciana Ribeiro"
+age = 31
+description = "Writes press releases framing poison leaks as 'isolated incidents'. Speaks calmly, sleeps poorly."
+satisfaction_data = SubResource("Resource_jay5v")
+role = 1
+experience_years = 7
+background = "Communications graduate recruited after managing a viral corporate apology."
+education_level = "Bachelor's Degree"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

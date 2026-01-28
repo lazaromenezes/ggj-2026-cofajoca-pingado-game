@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_dxo2q"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_juf83"]
+
+[sub_resource type="Resource" id="Resource_dxo2q"]
+script = ExtResource("1_dxo2q")
+value = 20
+
+[sub_resource type="Resource" id="Resource_juf83"]
+script = ExtResource("1_dxo2q")
+target = 1
+value = -5
+
+[sub_resource type="Resource" id="Resource_b54eg"]
+script = ExtResource("1_dxo2q")
+value = -25
+
+[resource]
+script = ExtResource("2_juf83")
+message = "{employee_name} asks for paid sick leave after showing early symptoms from prolonged exposure during mask testing. They promise full discretion."
+accept_consequences = Array[ExtResource("1_dxo2q")]([SubResource("Resource_dxo2q"), SubResource("Resource_juf83")])
+reject_consequences = Array[ExtResource("1_dxo2q")]([SubResource("Resource_b54eg")])
+min_day = 1

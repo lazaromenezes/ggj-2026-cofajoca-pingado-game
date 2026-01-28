@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_re5kx"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_o176x"]
+
+[sub_resource type="Resource" id="Resource_re5kx"]
+script = ExtResource("1_re5kx")
+value = 16
+
+[sub_resource type="Resource" id="Resource_o176x"]
+script = ExtResource("1_re5kx")
+target = 3
+value = -4
+
+[sub_resource type="Resource" id="Resource_qcl0e"]
+script = ExtResource("1_re5kx")
+value = -30
+
+[sub_resource type="Resource" id="Resource_1ldnp"]
+script = ExtResource("1_re5kx")
+target = 3
+value = -5
+
+[resource]
+script = ExtResource("2_o176x")
+message = "{employee_name} confesses they’ve been documenting internal practices and asks if whistleblower protections apply."
+accept_consequences = Array[ExtResource("1_re5kx")]([SubResource("Resource_re5kx"), SubResource("Resource_o176x")])
+reject_consequences = Array[ExtResource("1_re5kx")]([SubResource("Resource_qcl0e"), SubResource("Resource_1ldnp")])
+min_day = 8

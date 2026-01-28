@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://rd333cxqg63s"]
+
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_be5gt"]
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_wv1ic"]
+
+[sub_resource type="Resource" id="Resource_k0aos"]
+script = ExtResource("1_wv1ic")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_be5gt")
+name = "Paulo César Batista"
+age = 47
+description = "Pressured from above and resented from below. Delivers bad news with a practiced smile."
+satisfaction_data = SubResource("Resource_k0aos")
+role = 1
+experience_years = 19
+background = "Promoted internally after consistently meeting impossible targets."
+education_level = "Bachelor's Degree"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

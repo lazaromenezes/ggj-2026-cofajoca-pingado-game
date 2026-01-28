@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://d2kt55id2kk8e"]
+
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_1s6xw"]
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_p3pte"]
+
+[sub_resource type="Resource" id="Resource_3b7d5"]
+script = ExtResource("1_1s6xw")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_p3pte")
+name = "João Victor Almeida"
+age = 26
+description = "Coordinates shipments of masks and chemical byproducts. Knows which deliveries are never logged."
+satisfaction_data = SubResource("Resource_3b7d5")
+experience_years = 5
+background = "Hired through a third-party logistics firm."
+education_level = "High School"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_h0tq0"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_admqm"]
+
+[sub_resource type="Resource" id="Resource_h0tq0"]
+script = ExtResource("1_h0tq0")
+value = 22
+
+[sub_resource type="Resource" id="Resource_admqm"]
+script = ExtResource("1_h0tq0")
+target = 1
+value = -7
+
+[sub_resource type="Resource" id="Resource_kwa74"]
+script = ExtResource("1_h0tq0")
+value = -28
+
+[resource]
+script = ExtResource("2_admqm")
+message = "{employee_name} admits they can no longer afford medication due to stagnant wages and asks for a temporary stipend."
+accept_consequences = Array[ExtResource("1_h0tq0")]([SubResource("Resource_h0tq0"), SubResource("Resource_admqm")])
+reject_consequences = Array[ExtResource("1_h0tq0")]([SubResource("Resource_kwa74")])
+min_day = 4

@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_i3fir"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_7bmxg"]
+
+[sub_resource type="Resource" id="Resource_i3fir"]
+script = ExtResource("1_i3fir")
+value = 14
+
+[sub_resource type="Resource" id="Resource_7bmxg"]
+script = ExtResource("1_i3fir")
+target = 1
+value = -4
+
+[sub_resource type="Resource" id="Resource_743v8"]
+script = ExtResource("1_i3fir")
+value = -20
+
+[resource]
+script = ExtResource("2_7bmxg")
+message = "{employee_name} reports chronic insomnia due to night shifts and requests a temporary schedule change."
+accept_consequences = Array[ExtResource("1_i3fir")]([SubResource("Resource_i3fir"), SubResource("Resource_7bmxg")])
+reject_consequences = Array[ExtResource("1_i3fir")]([SubResource("Resource_743v8")])
+min_day = 5

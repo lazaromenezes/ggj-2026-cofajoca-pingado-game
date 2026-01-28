@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="REmployee" format=3 uid="uid://bi35qyawjt6xx"]
+
+[ext_resource type="Script" uid="uid://byq5gvpunyujd" path="res://src/employees/employee.gd" id="1_0sk2s"]
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_ma2ry"]
+
+[sub_resource type="Resource" id="Resource_8c6qu"]
+script = ExtResource("1_ma2ry")
+metadata/_custom_type_script = "uid://cchi8u68vdwve"
+
+[resource]
+script = ExtResource("1_0sk2s")
+name = "Roberto Klein"
+age = 43
+description = "Handles toxic compounds in the lower levels. Officially a contractor, unofficially permanent."
+satisfaction_data = SubResource("Resource_8c6qu")
+experience_years = 17
+background = "Former lab assistant laid off and rehired without benefits."
+education_level = "Technical Degree"
+metadata/_custom_type_script = "uid://byq5gvpunyujd"

@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bqxovdhpcsqcp"]
+
+[ext_resource type="Script" uid="uid://bbmvhaky76rm0" path="res://src/ui_objects/stamp_scene/stamp.gd" id="1_7yn7g"]
+
+[node name="Stamp" type="Button" unique_id=566548684]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7yn7g")

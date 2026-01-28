@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_xkcxh"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_rhiiw"]
+
+[sub_resource type="Resource" id="Resource_xkcxh"]
+script = ExtResource("1_xkcxh")
+value = 25
+
+[sub_resource type="Resource" id="Resource_rhiiw"]
+script = ExtResource("1_xkcxh")
+target = 1
+value = -8
+
+[sub_resource type="Resource" id="Resource_2ak6t"]
+script = ExtResource("1_xkcxh")
+value = -30
+
+[sub_resource type="Resource" id="Resource_ba0gr"]
+script = ExtResource("1_xkcxh")
+target = 2
+value = -3
+
+[resource]
+script = ExtResource("2_rhiiw")
+message = "{employee_name} requests maternal leave following complications during pregnancy. They fear losing their position if they step away now."
+accept_consequences = Array[ExtResource("1_xkcxh")]([SubResource("Resource_xkcxh"), SubResource("Resource_rhiiw")])
+reject_consequences = Array[ExtResource("1_xkcxh")]([SubResource("Resource_2ak6t"), SubResource("Resource_ba0gr")])
+min_day = 3

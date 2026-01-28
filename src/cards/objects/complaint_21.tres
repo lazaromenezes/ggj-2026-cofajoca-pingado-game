@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_n7m0m"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_sl1tu"]
+
+[sub_resource type="Resource" id="Resource_n7m0m"]
+script = ExtResource("1_n7m0m")
+value = 10
+
+[sub_resource type="Resource" id="Resource_sl1tu"]
+script = ExtResource("1_n7m0m")
+target = 1
+value = -1
+
+[sub_resource type="Resource" id="Resource_kfptk"]
+script = ExtResource("1_n7m0m")
+value = -15
+
+[resource]
+script = ExtResource("2_sl1tu")
+message = "{employee_name} asks to delay their performance review due to ongoing medical treatment."
+accept_consequences = Array[ExtResource("1_n7m0m")]([SubResource("Resource_n7m0m"), SubResource("Resource_sl1tu")])
+reject_consequences = Array[ExtResource("1_n7m0m")]([SubResource("Resource_kfptk")])
+min_day = 3

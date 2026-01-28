@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="RCard" format=3]
+
+[ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_l086y"]
+[ext_resource type="Script" path="res://src/cards/card.gd" id="2_xwywe"]
+
+[sub_resource type="Resource" id="Resource_l086y"]
+script = ExtResource("1_l086y")
+value = 16
+
+[sub_resource type="Resource" id="Resource_xwywe"]
+script = ExtResource("1_l086y")
+target = 1
+value = -4
+
+[sub_resource type="Resource" id="Resource_8a57k"]
+script = ExtResource("1_l086y")
+value = -20
+
+[resource]
+script = ExtResource("2_xwywe")
+message = "{employee_name} asks for permission to leave early twice a week to care for a sick parent. They say productivity will suffer otherwise."
+accept_consequences = Array[ExtResource("1_l086y")]([SubResource("Resource_l086y"), SubResource("Resource_xwywe")])
+reject_consequences = Array[ExtResource("1_l086y")]([SubResource("Resource_8a57k")])
+min_day = 2
