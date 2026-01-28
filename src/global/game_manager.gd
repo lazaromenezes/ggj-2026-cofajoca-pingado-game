@@ -49,3 +49,7 @@ func on_card_action(consequences: Array[RConsequence]) -> void:
 		current_session.tracker[consequence.target] += consequence.value
 	
 	tracker_changed.emit(current_session.tracker)
+
+
+func next_day() -> void:
+	date_manager.advance_day()

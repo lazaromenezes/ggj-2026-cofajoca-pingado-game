@@ -2,14 +2,13 @@ extends Control
 
 @onready var game_manager: NGameManager = $GameManager
 @onready var notes_space: GridContainer = %NotesSpace
+@onready var date_manager: NDateManger = $DateManager
 
 @export var card_scene: PackedScene
 
 func _ready() -> void:
+	date_manager.day_advanced.connect(_on_day_advanced)
 	game_manager.start()
-	
-	for card in game_manager.get_day_cards():
-		_place_card(card)
 
 
 func _place_card(card: RCard) -> void:
@@ -28,3 +27,10 @@ func _place_card(card: RCard) -> void:
 
 func on_card_action(_consequences: Array[RConsequence], card_object: CardScene) -> void:
 	card_object.queue_free()
+	if notes_space.get_child_count() == 1:
+		date_manager.advance_day()
+	
+
+func _on_day_advanced(_day: int) -> void:
+	for card in game_manager.get_day_cards():
+		_place_card(card)
