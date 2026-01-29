@@ -28,9 +28,8 @@ date_manager = NodePath("../DateManager")
 [node name="DateManager" type="Node" parent="." unique_id=179586996]
 script = ExtResource("3_h2yge")
 
-[node name="EmployeeManager" type="Node" parent="." unique_id=1686026448 node_paths=PackedStringArray("date_manager")]
+[node name="EmployeeManager" type="Node" parent="." unique_id=1686026448]
 script = ExtResource("4_1bvp3")
-date_manager = NodePath("../DateManager")
 employees_path = "res://src/employees/objects/"
 
 [node name="CardParser" type="Node" parent="." unique_id=62511926]

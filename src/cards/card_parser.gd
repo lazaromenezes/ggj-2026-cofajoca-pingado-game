@@ -28,15 +28,25 @@ func parse_card_data(card_data: Dictionary) -> RCard:
 	card.accept_consequences = []
 	for c : Dictionary in card_data.get("accept_consequences", []):
 		var consequence := RConsequence.new()
-		consequence.target = c.get("target", RConsequence.Target.COMPLAINER)
-		consequence.value = c.get("value", 0)
+		#consequence.target = c.get("target", RConsequence.Target.COMPLAINER)
+		consequence.modifier = parse_modifier(c["modifier"] as Dictionary)
 		card.accept_consequences.append(consequence)
 
 	card.reject_consequences = []
 	for c : Dictionary in card_data.get("reject_consequences", []):
 		var consequence := RConsequence.new()
-		consequence.target = c.get("target", RConsequence.Target.COMPLAINER)
-		consequence.value = c.get("value", 0)
+		#consequence.target = c.get("target", RConsequence.Target.COMPLAINER)
+		consequence.modifier = parse_modifier(c["modifier"] as Dictionary)
 		card.reject_consequences.append(consequence)
 
 	return card
+
+func parse_modifier(p_modifier: Dictionary) -> RModifier:
+	#{ "type": "FLAT", "value": -25 }
+	var new_mod := RModifier.new()
+	if p_modifier["type"] == "FLAT":
+		new_mod.type = RModifier.Type.FLAT
+	elif p_modifier["type"] == "PERCENT":
+		new_mod.type = RModifier.Type.PERCENT
+	new_mod.value = p_modifier["value"]
+	return new_mod

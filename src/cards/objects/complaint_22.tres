@@ -2,26 +2,43 @@
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_re5kx"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_o176x"]
-
-[sub_resource type="Resource" id="Resource_re5kx"]
-script = ExtResource("1_re5kx")
-value = 16
-
-[sub_resource type="Resource" id="Resource_o176x"]
-script = ExtResource("1_re5kx")
-value = -4
-
-[sub_resource type="Resource" id="Resource_qcl0e"]
-script = ExtResource("1_re5kx")
-value = -30
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_qcl0e"]
 
 [sub_resource type="Resource" id="Resource_1ldnp"]
+script = ExtResource("2_qcl0e")
+value = 16
+
+[sub_resource type="Resource" id="Resource_jyh85"]
 script = ExtResource("1_re5kx")
+modifier = SubResource("Resource_1ldnp")
+
+[sub_resource type="Resource" id="Resource_87qtn"]
+script = ExtResource("2_qcl0e")
+value = -4
+
+[sub_resource type="Resource" id="Resource_2s2i5"]
+script = ExtResource("1_re5kx")
+modifier = SubResource("Resource_87qtn")
+
+[sub_resource type="Resource" id="Resource_ugyqu"]
+script = ExtResource("2_qcl0e")
+value = -30
+
+[sub_resource type="Resource" id="Resource_1deff"]
+script = ExtResource("1_re5kx")
+modifier = SubResource("Resource_ugyqu")
+
+[sub_resource type="Resource" id="Resource_cd68r"]
+script = ExtResource("2_qcl0e")
 value = -5
+
+[sub_resource type="Resource" id="Resource_v24sj"]
+script = ExtResource("1_re5kx")
+modifier = SubResource("Resource_cd68r")
 
 [resource]
 script = ExtResource("2_o176x")
 message = "{employee_name} confesses they’ve been documenting internal practices and asks if whistleblower protections apply."
-accept_consequences = Array[ExtResource("1_re5kx")]([SubResource("Resource_re5kx"), SubResource("Resource_o176x")])
-reject_consequences = Array[ExtResource("1_re5kx")]([SubResource("Resource_qcl0e"), SubResource("Resource_1ldnp")])
+accept_consequences = Array[ExtResource("1_re5kx")]([SubResource("Resource_jyh85"), SubResource("Resource_2s2i5")])
+reject_consequences = Array[ExtResource("1_re5kx")]([SubResource("Resource_1deff"), SubResource("Resource_v24sj")])
 min_day = 8

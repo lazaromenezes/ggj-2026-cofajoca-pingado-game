@@ -1,4 +1,4 @@
-class_name NDateManger extends Node
+class_name NDateManager extends Node
 
 signal on_advance_day(day: int)
 

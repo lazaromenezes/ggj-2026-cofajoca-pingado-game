@@ -13,6 +13,7 @@ name = "João Victor Almeida"
 age = 26
 description = "Coordinates shipments of masks and chemical byproducts. Knows which deliveries are never logged."
 satisfaction_data = SubResource("Resource_3b7d5")
+salary = 550
 experience_years = 5
 background = "Hired through a third-party logistics firm."
 education_level = "High School"

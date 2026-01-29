@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_j11tn"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_58o4q"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_y3gpv"]
 
-[sub_resource type="Resource" id="Resource_j11tn"]
-script = ExtResource("1_j11tn")
+[sub_resource type="Resource" id="Resource_6ybnx"]
+script = ExtResource("2_58o4q")
 value = 14
 
-[sub_resource type="Resource" id="Resource_y3gpv"]
+[sub_resource type="Resource" id="Resource_hm11g"]
 script = ExtResource("1_j11tn")
+modifier = SubResource("Resource_6ybnx")
+
+[sub_resource type="Resource" id="Resource_on8ag"]
+script = ExtResource("2_58o4q")
 value = -6
 
-[sub_resource type="Resource" id="Resource_58o4q"]
+[sub_resource type="Resource" id="Resource_ro5aj"]
 script = ExtResource("1_j11tn")
+modifier = SubResource("Resource_on8ag")
+
+[sub_resource type="Resource" id="Resource_ljf0v"]
+script = ExtResource("2_58o4q")
 value = -20
+
+[sub_resource type="Resource" id="Resource_76bjm"]
+script = ExtResource("1_j11tn")
+modifier = SubResource("Resource_ljf0v")
 
 [resource]
 script = ExtResource("2_y3gpv")
 message = "{employee_name} requests temporary housing assistance after being relocated closer to the facility."
-accept_consequences = Array[ExtResource("1_j11tn")]([SubResource("Resource_j11tn"), SubResource("Resource_y3gpv")])
-reject_consequences = Array[ExtResource("1_j11tn")]([SubResource("Resource_58o4q")])
+accept_consequences = Array[ExtResource("1_j11tn")]([SubResource("Resource_hm11g"), SubResource("Resource_ro5aj")])
+reject_consequences = Array[ExtResource("1_j11tn")]([SubResource("Resource_76bjm")])
 min_day = 4

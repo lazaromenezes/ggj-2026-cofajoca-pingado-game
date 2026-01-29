@@ -2,22 +2,35 @@
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_qu25d"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_fe0qm"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_yikqw"]
 
-[sub_resource type="Resource" id="Resource_qu25d"]
-script = ExtResource("1_qu25d")
+[sub_resource type="Resource" id="Resource_k738n"]
+script = ExtResource("2_yikqw")
 value = 15
 
-[sub_resource type="Resource" id="Resource_fe0qm"]
+[sub_resource type="Resource" id="Resource_1601r"]
 script = ExtResource("1_qu25d")
+modifier = SubResource("Resource_k738n")
+
+[sub_resource type="Resource" id="Resource_ppndn"]
+script = ExtResource("2_yikqw")
 value = -2
 
-[sub_resource type="Resource" id="Resource_yikqw"]
+[sub_resource type="Resource" id="Resource_f3ovd"]
 script = ExtResource("1_qu25d")
+modifier = SubResource("Resource_ppndn")
+
+[sub_resource type="Resource" id="Resource_ky47s"]
+script = ExtResource("2_yikqw")
 value = -20
+
+[sub_resource type="Resource" id="Resource_8568w"]
+script = ExtResource("1_qu25d")
+modifier = SubResource("Resource_ky47s")
 
 [resource]
 script = ExtResource("2_fe0qm")
 message = "{employee_name} asks for written assurance that medical incidents will not be used against them in performance reviews."
-accept_consequences = Array[ExtResource("1_qu25d")]([SubResource("Resource_qu25d"), SubResource("Resource_fe0qm")])
-reject_consequences = Array[ExtResource("1_qu25d")]([SubResource("Resource_yikqw")])
+accept_consequences = Array[ExtResource("1_qu25d")]([SubResource("Resource_1601r"), SubResource("Resource_f3ovd")])
+reject_consequences = Array[ExtResource("1_qu25d")]([SubResource("Resource_8568w")])
 min_day = 3

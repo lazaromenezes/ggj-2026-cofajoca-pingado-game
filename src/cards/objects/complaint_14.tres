@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_vdnla"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_mxcti"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_ub2um"]
 
-[sub_resource type="Resource" id="Resource_vdnla"]
-script = ExtResource("1_vdnla")
+[sub_resource type="Resource" id="Resource_yirto"]
+script = ExtResource("2_mxcti")
 value = 12
 
-[sub_resource type="Resource" id="Resource_ub2um"]
+[sub_resource type="Resource" id="Resource_25swl"]
 script = ExtResource("1_vdnla")
+modifier = SubResource("Resource_yirto")
+
+[sub_resource type="Resource" id="Resource_lkuwv"]
+script = ExtResource("2_mxcti")
 value = -3
 
-[sub_resource type="Resource" id="Resource_mxcti"]
+[sub_resource type="Resource" id="Resource_lbquu"]
 script = ExtResource("1_vdnla")
+modifier = SubResource("Resource_lkuwv")
+
+[sub_resource type="Resource" id="Resource_xk0e4"]
+script = ExtResource("2_mxcti")
 value = -18
+
+[sub_resource type="Resource" id="Resource_x8gip"]
+script = ExtResource("1_vdnla")
+modifier = SubResource("Resource_xk0e4")
 
 [resource]
 script = ExtResource("2_ub2um")
 message = "{employee_name} requests a short unpaid leave to recover from burnout after consecutive overtime weeks."
-accept_consequences = Array[ExtResource("1_vdnla")]([SubResource("Resource_vdnla"), SubResource("Resource_ub2um")])
-reject_consequences = Array[ExtResource("1_vdnla")]([SubResource("Resource_mxcti")])
+accept_consequences = Array[ExtResource("1_vdnla")]([SubResource("Resource_25swl"), SubResource("Resource_lbquu")])
+reject_consequences = Array[ExtResource("1_vdnla")]([SubResource("Resource_x8gip")])
 min_day = 2

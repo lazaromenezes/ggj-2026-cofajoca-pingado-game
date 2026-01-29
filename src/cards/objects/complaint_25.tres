@@ -2,22 +2,35 @@
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_cr720"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_12a8a"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_u68q6"]
 
-[sub_resource type="Resource" id="Resource_cr720"]
-script = ExtResource("1_cr720")
+[sub_resource type="Resource" id="Resource_vu74n"]
+script = ExtResource("2_u68q6")
 value = 15
 
-[sub_resource type="Resource" id="Resource_12a8a"]
+[sub_resource type="Resource" id="Resource_1ocaa"]
 script = ExtResource("1_cr720")
+modifier = SubResource("Resource_vu74n")
+
+[sub_resource type="Resource" id="Resource_vo22r"]
+script = ExtResource("2_u68q6")
 value = -9
 
-[sub_resource type="Resource" id="Resource_u68q6"]
+[sub_resource type="Resource" id="Resource_0bqo3"]
 script = ExtResource("1_cr720")
+modifier = SubResource("Resource_vo22r")
+
+[sub_resource type="Resource" id="Resource_85elm"]
+script = ExtResource("2_u68q6")
 value = -28
+
+[sub_resource type="Resource" id="Resource_dl64i"]
+script = ExtResource("1_cr720")
+modifier = SubResource("Resource_85elm")
 
 [resource]
 script = ExtResource("2_12a8a")
 message = "{employee_name} requests confirmation that their family will be compensated if exposure leads to long-term illness."
-accept_consequences = Array[ExtResource("1_cr720")]([SubResource("Resource_cr720"), SubResource("Resource_12a8a")])
-reject_consequences = Array[ExtResource("1_cr720")]([SubResource("Resource_u68q6")])
+accept_consequences = Array[ExtResource("1_cr720")]([SubResource("Resource_1ocaa"), SubResource("Resource_0bqo3")])
+reject_consequences = Array[ExtResource("1_cr720")]([SubResource("Resource_dl64i")])
 min_day = 9

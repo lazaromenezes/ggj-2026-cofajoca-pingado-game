@@ -2,22 +2,35 @@
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_w67pw"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_1pb0d"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_fajga"]
 
-[sub_resource type="Resource" id="Resource_w67pw"]
-script = ExtResource("1_w67pw")
+[sub_resource type="Resource" id="Resource_27nn2"]
+script = ExtResource("2_fajga")
 value = 19
 
-[sub_resource type="Resource" id="Resource_1pb0d"]
+[sub_resource type="Resource" id="Resource_kmycv"]
 script = ExtResource("1_w67pw")
+modifier = SubResource("Resource_27nn2")
+
+[sub_resource type="Resource" id="Resource_km38j"]
+script = ExtResource("2_fajga")
 value = -5
 
-[sub_resource type="Resource" id="Resource_fajga"]
+[sub_resource type="Resource" id="Resource_rldth"]
 script = ExtResource("1_w67pw")
+modifier = SubResource("Resource_km38j")
+
+[sub_resource type="Resource" id="Resource_6vq10"]
+script = ExtResource("2_fajga")
 value = -23
+
+[sub_resource type="Resource" id="Resource_apse6"]
+script = ExtResource("1_w67pw")
+modifier = SubResource("Resource_6vq10")
 
 [resource]
 script = ExtResource("2_1pb0d")
 message = "{employee_name} reports recurring nightmares related to emergency drills and asks for counseling support."
-accept_consequences = Array[ExtResource("1_w67pw")]([SubResource("Resource_w67pw"), SubResource("Resource_1pb0d")])
-reject_consequences = Array[ExtResource("1_w67pw")]([SubResource("Resource_fajga")])
+accept_consequences = Array[ExtResource("1_w67pw")]([SubResource("Resource_kmycv"), SubResource("Resource_rldth")])
+reject_consequences = Array[ExtResource("1_w67pw")]([SubResource("Resource_apse6")])
 min_day = 5

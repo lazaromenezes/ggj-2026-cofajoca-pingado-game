@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_n7m0m"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_kfptk"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_sl1tu"]
 
-[sub_resource type="Resource" id="Resource_n7m0m"]
-script = ExtResource("1_n7m0m")
+[sub_resource type="Resource" id="Resource_qqkju"]
+script = ExtResource("2_kfptk")
 value = 10
 
-[sub_resource type="Resource" id="Resource_sl1tu"]
+[sub_resource type="Resource" id="Resource_snejx"]
 script = ExtResource("1_n7m0m")
+modifier = SubResource("Resource_qqkju")
+
+[sub_resource type="Resource" id="Resource_1e6u3"]
+script = ExtResource("2_kfptk")
 value = -1
 
-[sub_resource type="Resource" id="Resource_kfptk"]
+[sub_resource type="Resource" id="Resource_4pyuh"]
 script = ExtResource("1_n7m0m")
+modifier = SubResource("Resource_1e6u3")
+
+[sub_resource type="Resource" id="Resource_lytdu"]
+script = ExtResource("2_kfptk")
 value = -15
+
+[sub_resource type="Resource" id="Resource_3ydww"]
+script = ExtResource("1_n7m0m")
+modifier = SubResource("Resource_lytdu")
 
 [resource]
 script = ExtResource("2_sl1tu")
 message = "{employee_name} asks to delay their performance review due to ongoing medical treatment."
-accept_consequences = Array[ExtResource("1_n7m0m")]([SubResource("Resource_n7m0m"), SubResource("Resource_sl1tu")])
-reject_consequences = Array[ExtResource("1_n7m0m")]([SubResource("Resource_kfptk")])
+accept_consequences = Array[ExtResource("1_n7m0m")]([SubResource("Resource_snejx"), SubResource("Resource_4pyuh")])
+reject_consequences = Array[ExtResource("1_n7m0m")]([SubResource("Resource_3ydww")])
 min_day = 3

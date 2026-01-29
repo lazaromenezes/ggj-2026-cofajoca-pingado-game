@@ -14,6 +14,7 @@ age = 23
 description = "Tests prototype masks against controlled exposure. Signed the waiver without reading it."
 satisfaction_data = SubResource("Resource_uxux6")
 role = 1
+salary = 500
 experience_years = 1
 background = "University student working to pay medical expenses for a family member."
 education_level = "Incomplete College"

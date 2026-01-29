@@ -2,22 +2,35 @@
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_08axq"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_0pde8"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_ic607"]
 
-[sub_resource type="Resource" id="Resource_08axq"]
-script = ExtResource("1_08axq")
+[sub_resource type="Resource" id="Resource_vhucc"]
+script = ExtResource("2_ic607")
 value = 10
 
-[sub_resource type="Resource" id="Resource_0pde8"]
+[sub_resource type="Resource" id="Resource_ca5hy"]
 script = ExtResource("1_08axq")
+modifier = SubResource("Resource_vhucc")
+
+[sub_resource type="Resource" id="Resource_bv1wt"]
+script = ExtResource("2_ic607")
 value = -2
 
-[sub_resource type="Resource" id="Resource_ic607"]
+[sub_resource type="Resource" id="Resource_3x375"]
 script = ExtResource("1_08axq")
+modifier = SubResource("Resource_bv1wt")
+
+[sub_resource type="Resource" id="Resource_m1pr4"]
+script = ExtResource("2_ic607")
 value = -15
+
+[sub_resource type="Resource" id="Resource_co7vt"]
+script = ExtResource("1_08axq")
+modifier = SubResource("Resource_m1pr4")
 
 [resource]
 script = ExtResource("2_0pde8")
 message = "{employee_name} asks for a single unpaid day off to attend a family funeral. They already missed their quota this week."
-accept_consequences = Array[ExtResource("1_08axq")]([SubResource("Resource_08axq"), SubResource("Resource_0pde8")])
-reject_consequences = Array[ExtResource("1_08axq")]([SubResource("Resource_ic607")])
+accept_consequences = Array[ExtResource("1_08axq")]([SubResource("Resource_ca5hy"), SubResource("Resource_3x375")])
+reject_consequences = Array[ExtResource("1_08axq")]([SubResource("Resource_co7vt")])
 min_day = 1

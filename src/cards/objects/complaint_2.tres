@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_bamnp"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_3f7u0"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_jkp58"]
 
-[sub_resource type="Resource" id="Resource_bamnp"]
-script = ExtResource("1_bamnp")
+[sub_resource type="Resource" id="Resource_0n5sw"]
+script = ExtResource("2_3f7u0")
 value = 15
 
-[sub_resource type="Resource" id="Resource_jkp58"]
+[sub_resource type="Resource" id="Resource_j22bp"]
 script = ExtResource("1_bamnp")
+modifier = SubResource("Resource_0n5sw")
+
+[sub_resource type="Resource" id="Resource_e6phh"]
+script = ExtResource("2_3f7u0")
 value = -4
 
-[sub_resource type="Resource" id="Resource_3f7u0"]
+[sub_resource type="Resource" id="Resource_dsxtr"]
 script = ExtResource("1_bamnp")
+modifier = SubResource("Resource_e6phh")
+
+[sub_resource type="Resource" id="Resource_hp1dy"]
+script = ExtResource("2_3f7u0")
 value = -18
+
+[sub_resource type="Resource" id="Resource_j4o57"]
+script = ExtResource("1_bamnp")
+modifier = SubResource("Resource_hp1dy")
 
 [resource]
 script = ExtResource("2_jkp58")
 message = "{employee_name} quietly asks to be reassigned away from toxin handling after repeated nausea and fainting spells."
-accept_consequences = Array[ExtResource("1_bamnp")]([SubResource("Resource_bamnp"), SubResource("Resource_jkp58")])
-reject_consequences = Array[ExtResource("1_bamnp")]([SubResource("Resource_3f7u0")])
+accept_consequences = Array[ExtResource("1_bamnp")]([SubResource("Resource_j22bp"), SubResource("Resource_dsxtr")])
+reject_consequences = Array[ExtResource("1_bamnp")]([SubResource("Resource_j4o57")])
 min_day = 2

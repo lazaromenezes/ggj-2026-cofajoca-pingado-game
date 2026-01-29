@@ -1,27 +1,44 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_xkcxh"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_2ak6t"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_rhiiw"]
 
-[sub_resource type="Resource" id="Resource_xkcxh"]
-script = ExtResource("1_xkcxh")
+[sub_resource type="Resource" id="Resource_ba0gr"]
+script = ExtResource("2_2ak6t")
 value = 25
 
-[sub_resource type="Resource" id="Resource_rhiiw"]
+[sub_resource type="Resource" id="Resource_6njbg"]
 script = ExtResource("1_xkcxh")
+modifier = SubResource("Resource_ba0gr")
+
+[sub_resource type="Resource" id="Resource_cia64"]
+script = ExtResource("2_2ak6t")
 value = -8
 
-[sub_resource type="Resource" id="Resource_2ak6t"]
+[sub_resource type="Resource" id="Resource_6ulvh"]
 script = ExtResource("1_xkcxh")
+modifier = SubResource("Resource_cia64")
+
+[sub_resource type="Resource" id="Resource_boxtp"]
+script = ExtResource("2_2ak6t")
 value = -30
 
-[sub_resource type="Resource" id="Resource_ba0gr"]
+[sub_resource type="Resource" id="Resource_oe2v5"]
 script = ExtResource("1_xkcxh")
+modifier = SubResource("Resource_boxtp")
+
+[sub_resource type="Resource" id="Resource_lnbb1"]
+script = ExtResource("2_2ak6t")
 value = -3
+
+[sub_resource type="Resource" id="Resource_fa2bs"]
+script = ExtResource("1_xkcxh")
+modifier = SubResource("Resource_lnbb1")
 
 [resource]
 script = ExtResource("2_rhiiw")
 message = "{employee_name} requests maternal leave following complications during pregnancy. They fear losing their position if they step away now."
-accept_consequences = Array[ExtResource("1_xkcxh")]([SubResource("Resource_xkcxh"), SubResource("Resource_rhiiw")])
-reject_consequences = Array[ExtResource("1_xkcxh")]([SubResource("Resource_2ak6t"), SubResource("Resource_ba0gr")])
+accept_consequences = Array[ExtResource("1_xkcxh")]([SubResource("Resource_6njbg"), SubResource("Resource_6ulvh")])
+reject_consequences = Array[ExtResource("1_xkcxh")]([SubResource("Resource_oe2v5"), SubResource("Resource_fa2bs")])
 min_day = 3

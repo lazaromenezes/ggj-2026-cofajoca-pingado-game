@@ -5,12 +5,13 @@ signal satisfaction_level_changed(satisfaction_level: RSatisfaction.Satisfaction
 var current_satisfaction_level : RSatisfaction.SatisfactionLevel
 var satisfaction: int
 var satisfaction_data: RSatisfaction
+var modifiers : OModifierStack
 
-func change_satisfaction(value: int) -> void:
-	satisfaction += value
+func evaluate_satisfaction() -> void:
+	var eval_satisfaction := modifiers.get_modified_value(satisfaction)
 	var satisfaction_map := satisfaction_data.get_satisfaction_map()
 	for satisfaction_level in satisfaction_map:
-		if value < satisfaction_map[satisfaction_level]\
+		if eval_satisfaction < satisfaction_map[satisfaction_level]\
 		 and satisfaction_level != current_satisfaction_level:
 			current_satisfaction_level = satisfaction_level
 			satisfaction_level_changed.emit(current_satisfaction_level)

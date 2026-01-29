@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_etixl"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_bag3t"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_sgv23"]
 
-[sub_resource type="Resource" id="Resource_etixl"]
-script = ExtResource("1_etixl")
+[sub_resource type="Resource" id="Resource_as31j"]
+script = ExtResource("2_bag3t")
 value = 22
 
-[sub_resource type="Resource" id="Resource_sgv23"]
+[sub_resource type="Resource" id="Resource_cant3"]
 script = ExtResource("1_etixl")
+modifier = SubResource("Resource_as31j")
+
+[sub_resource type="Resource" id="Resource_43ing"]
+script = ExtResource("2_bag3t")
 value = -7
 
-[sub_resource type="Resource" id="Resource_bag3t"]
+[sub_resource type="Resource" id="Resource_cdj6e"]
 script = ExtResource("1_etixl")
+modifier = SubResource("Resource_43ing")
+
+[sub_resource type="Resource" id="Resource_r6ja3"]
+script = ExtResource("2_bag3t")
 value = -26
+
+[sub_resource type="Resource" id="Resource_n70sm"]
+script = ExtResource("1_etixl")
+modifier = SubResource("Resource_r6ja3")
 
 [resource]
 script = ExtResource("2_sgv23")
 message = "{employee_name} asks for mental health leave after witnessing a co-worker collapse during containment failure."
-accept_consequences = Array[ExtResource("1_etixl")]([SubResource("Resource_etixl"), SubResource("Resource_sgv23")])
-reject_consequences = Array[ExtResource("1_etixl")]([SubResource("Resource_bag3t")])
+accept_consequences = Array[ExtResource("1_etixl")]([SubResource("Resource_cant3"), SubResource("Resource_cdj6e")])
+reject_consequences = Array[ExtResource("1_etixl")]([SubResource("Resource_n70sm")])
 min_day = 4

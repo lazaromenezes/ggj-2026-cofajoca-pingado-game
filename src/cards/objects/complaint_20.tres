@@ -2,22 +2,35 @@
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_ofkon"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_ckpyd"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_ogp0g"]
 
-[sub_resource type="Resource" id="Resource_ofkon"]
-script = ExtResource("1_ofkon")
+[sub_resource type="Resource" id="Resource_otqpy"]
+script = ExtResource("2_ogp0g")
 value = 18
 
-[sub_resource type="Resource" id="Resource_ckpyd"]
+[sub_resource type="Resource" id="Resource_748sn"]
 script = ExtResource("1_ofkon")
+modifier = SubResource("Resource_otqpy")
+
+[sub_resource type="Resource" id="Resource_b74v6"]
+script = ExtResource("2_ogp0g")
 value = -8
 
-[sub_resource type="Resource" id="Resource_ogp0g"]
+[sub_resource type="Resource" id="Resource_oijba"]
 script = ExtResource("1_ofkon")
+modifier = SubResource("Resource_b74v6")
+
+[sub_resource type="Resource" id="Resource_jtpre"]
+script = ExtResource("2_ogp0g")
 value = -25
+
+[sub_resource type="Resource" id="Resource_djnug"]
+script = ExtResource("1_ofkon")
+modifier = SubResource("Resource_jtpre")
 
 [resource]
 script = ExtResource("2_ckpyd")
 message = "{employee_name} asks for hazard pay after a spike in containment failures during night shifts."
-accept_consequences = Array[ExtResource("1_ofkon")]([SubResource("Resource_ofkon"), SubResource("Resource_ckpyd")])
-reject_consequences = Array[ExtResource("1_ofkon")]([SubResource("Resource_ogp0g")])
+accept_consequences = Array[ExtResource("1_ofkon")]([SubResource("Resource_748sn"), SubResource("Resource_oijba")])
+reject_consequences = Array[ExtResource("1_ofkon")]([SubResource("Resource_djnug")])
 min_day = 6

@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3 uid="uid://bskhg2e7s7yq5"]
 
 [ext_resource type="Script" uid="uid://bv27inp71bsog" path="res://src/cards/consequence.gd" id="1_dxo2q"]
+[ext_resource type="Script" uid="uid://cac22q5ocgs6j" path="res://src/business/modifier.gd" id="2_b54eg"]
 [ext_resource type="Script" uid="uid://d2uf8oif0nl5c" path="res://src/cards/card.gd" id="2_juf83"]
 
-[sub_resource type="Resource" id="Resource_dxo2q"]
-script = ExtResource("1_dxo2q")
+[sub_resource type="Resource" id="Resource_3w6dg"]
+script = ExtResource("2_b54eg")
 value = 20
 
-[sub_resource type="Resource" id="Resource_juf83"]
+[sub_resource type="Resource" id="Resource_16x68"]
 script = ExtResource("1_dxo2q")
+modifier = SubResource("Resource_3w6dg")
+
+[sub_resource type="Resource" id="Resource_2n0oe"]
+script = ExtResource("2_b54eg")
 value = -5
 
-[sub_resource type="Resource" id="Resource_b54eg"]
+[sub_resource type="Resource" id="Resource_ubhv6"]
 script = ExtResource("1_dxo2q")
+modifier = SubResource("Resource_2n0oe")
+
+[sub_resource type="Resource" id="Resource_2cbdj"]
+script = ExtResource("2_b54eg")
 value = -25
+
+[sub_resource type="Resource" id="Resource_2e1nt"]
+script = ExtResource("1_dxo2q")
+modifier = SubResource("Resource_2cbdj")
 
 [resource]
 script = ExtResource("2_juf83")
 message = "{employee_name} asks for paid sick leave after showing early symptoms from prolonged exposure during mask testing. They promise full discretion."
-accept_consequences = Array[ExtResource("1_dxo2q")]([SubResource("Resource_dxo2q"), SubResource("Resource_juf83")])
-reject_consequences = Array[ExtResource("1_dxo2q")]([SubResource("Resource_b54eg")])
+accept_consequences = Array[ExtResource("1_dxo2q")]([SubResource("Resource_16x68"), SubResource("Resource_ubhv6")])
+reject_consequences = Array[ExtResource("1_dxo2q")]([SubResource("Resource_2e1nt")])
 min_day = 1

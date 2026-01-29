@@ -1,27 +1,44 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_go08i"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_3qnj2"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_5o06s"]
 
-[sub_resource type="Resource" id="Resource_go08i"]
-script = ExtResource("1_go08i")
+[sub_resource type="Resource" id="Resource_5c3v4"]
+script = ExtResource("2_3qnj2")
 value = 16
 
-[sub_resource type="Resource" id="Resource_5o06s"]
+[sub_resource type="Resource" id="Resource_qvck0"]
 script = ExtResource("1_go08i")
+modifier = SubResource("Resource_5c3v4")
+
+[sub_resource type="Resource" id="Resource_dw5uu"]
+script = ExtResource("2_3qnj2")
 value = -6
 
-[sub_resource type="Resource" id="Resource_3qnj2"]
+[sub_resource type="Resource" id="Resource_cd4i5"]
 script = ExtResource("1_go08i")
+modifier = SubResource("Resource_dw5uu")
+
+[sub_resource type="Resource" id="Resource_pxin6"]
+script = ExtResource("2_3qnj2")
 value = -28
 
-[sub_resource type="Resource" id="Resource_5c3v4"]
+[sub_resource type="Resource" id="Resource_ibysu"]
 script = ExtResource("1_go08i")
+modifier = SubResource("Resource_pxin6")
+
+[sub_resource type="Resource" id="Resource_pgif6"]
+script = ExtResource("2_3qnj2")
 value = -3
+
+[sub_resource type="Resource" id="Resource_i2ruc"]
+script = ExtResource("1_go08i")
+modifier = SubResource("Resource_pgif6")
 
 [resource]
 script = ExtResource("2_5o06s")
 message = "{employee_name} confesses they’ve been skipping safety steps to keep up with production targets and fears an accident is coming."
-accept_consequences = Array[ExtResource("1_go08i")]([SubResource("Resource_go08i"), SubResource("Resource_5o06s")])
-reject_consequences = Array[ExtResource("1_go08i")]([SubResource("Resource_3qnj2"), SubResource("Resource_5c3v4")])
+accept_consequences = Array[ExtResource("1_go08i")]([SubResource("Resource_qvck0"), SubResource("Resource_cd4i5")])
+reject_consequences = Array[ExtResource("1_go08i")]([SubResource("Resource_ibysu"), SubResource("Resource_i2ruc")])
 min_day = 6

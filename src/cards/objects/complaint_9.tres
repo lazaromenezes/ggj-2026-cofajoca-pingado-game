@@ -1,27 +1,44 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_ydtme"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_14xwp"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_hq6by"]
 
-[sub_resource type="Resource" id="Resource_ydtme"]
-script = ExtResource("1_ydtme")
+[sub_resource type="Resource" id="Resource_l60ds"]
+script = ExtResource("2_14xwp")
 value = 12
 
-[sub_resource type="Resource" id="Resource_hq6by"]
+[sub_resource type="Resource" id="Resource_tuo8k"]
 script = ExtResource("1_ydtme")
+modifier = SubResource("Resource_l60ds")
+
+[sub_resource type="Resource" id="Resource_bcvfe"]
+script = ExtResource("2_14xwp")
 value = 4
 
-[sub_resource type="Resource" id="Resource_14xwp"]
+[sub_resource type="Resource" id="Resource_nlamx"]
 script = ExtResource("1_ydtme")
+modifier = SubResource("Resource_bcvfe")
+
+[sub_resource type="Resource" id="Resource_45t6i"]
+script = ExtResource("2_14xwp")
 value = -10
 
-[sub_resource type="Resource" id="Resource_l60ds"]
+[sub_resource type="Resource" id="Resource_ursa3"]
 script = ExtResource("1_ydtme")
+modifier = SubResource("Resource_45t6i")
+
+[sub_resource type="Resource" id="Resource_a6vdk"]
+script = ExtResource("2_14xwp")
 value = -18
+
+[sub_resource type="Resource" id="Resource_mwhxt"]
+script = ExtResource("1_ydtme")
+modifier = SubResource("Resource_a6vdk")
 
 [resource]
 script = ExtResource("2_hq6by")
 message = "{employee_name} requests protective equipment upgrades after noticing defects in the current masks used internally."
-accept_consequences = Array[ExtResource("1_ydtme")]([SubResource("Resource_ydtme"), SubResource("Resource_hq6by"), SubResource("Resource_14xwp")])
-reject_consequences = Array[ExtResource("1_ydtme")]([SubResource("Resource_l60ds")])
+accept_consequences = Array[ExtResource("1_ydtme")]([SubResource("Resource_tuo8k"), SubResource("Resource_nlamx"), SubResource("Resource_ursa3")])
+reject_consequences = Array[ExtResource("1_ydtme")]([SubResource("Resource_mwhxt")])
 min_day = 8

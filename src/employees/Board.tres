@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="RSatisfaction" format=3 uid="uid://1aet40o807wn"]
+
+[ext_resource type="Script" uid="uid://cchi8u68vdwve" path="res://src/employees/statisfaction.gd" id="1_exyrp"]
+
+[resource]
+script = ExtResource("1_exyrp")
+min_value = 125000
+max_value = 1600000
+start_value = 1100000
+miserable_threshold = 8000000
+unhappy_threshold = 9000000
+neutral_threshold = 1000000
+content_threshold = 1350000
+happy_threshold = 1500000
+metadata/_custom_type_script = "uid://cchi8u68vdwve"

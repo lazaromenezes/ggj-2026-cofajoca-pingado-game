@@ -2,10 +2,12 @@ class_name RConsequence extends Resource
 
 enum Target {
 	COMPLAINER,
-	BUDGET,
 	WORKERS,
-	PUBLIC_RELATIONS
+	PUBLIC_RELATIONS,
+	SALES,
+	PRODUCTION_COSTS,
+	TRANSPORTATION_COSTS,
+	MARKETING_COSTS
 }
-
 @export var target : Target
-@export var value : int
+@export var modifier : RModifier

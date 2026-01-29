@@ -1,23 +1,36 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_tbwgq"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_olfu2"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_qajun"]
 
-[sub_resource type="Resource" id="Resource_tbwgq"]
-script = ExtResource("1_tbwgq")
+[sub_resource type="Resource" id="Resource_ke37e"]
+script = ExtResource("2_olfu2")
 value = 12
 
-[sub_resource type="Resource" id="Resource_qajun"]
+[sub_resource type="Resource" id="Resource_eripg"]
 script = ExtResource("1_tbwgq")
+modifier = SubResource("Resource_ke37e")
+
+[sub_resource type="Resource" id="Resource_5d8x3"]
+script = ExtResource("2_olfu2")
 value = -3
 
-[sub_resource type="Resource" id="Resource_olfu2"]
+[sub_resource type="Resource" id="Resource_cp0wo"]
 script = ExtResource("1_tbwgq")
+modifier = SubResource("Resource_5d8x3")
+
+[sub_resource type="Resource" id="Resource_vjl8s"]
+script = ExtResource("2_olfu2")
 value = -22
+
+[sub_resource type="Resource" id="Resource_a0wmi"]
+script = ExtResource("1_tbwgq")
+modifier = SubResource("Resource_vjl8s")
 
 [resource]
 script = ExtResource("2_qajun")
 message = "{employee_name} admits they’ve been falsifying their stamina reports to avoid punishment. They ask for reduced shifts instead of discipline."
-accept_consequences = Array[ExtResource("1_tbwgq")]([SubResource("Resource_tbwgq"), SubResource("Resource_qajun")])
-reject_consequences = Array[ExtResource("1_tbwgq")]([SubResource("Resource_olfu2")])
+accept_consequences = Array[ExtResource("1_tbwgq")]([SubResource("Resource_eripg"), SubResource("Resource_cp0wo")])
+reject_consequences = Array[ExtResource("1_tbwgq")]([SubResource("Resource_a0wmi")])
 min_day = 4

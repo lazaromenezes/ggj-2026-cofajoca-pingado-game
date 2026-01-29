@@ -1,27 +1,44 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_y5qk6"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_frw2m"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_om5b6"]
 
-[sub_resource type="Resource" id="Resource_y5qk6"]
-script = ExtResource("1_y5qk6")
+[sub_resource type="Resource" id="Resource_8flrp"]
+script = ExtResource("2_frw2m")
 value = 10
 
-[sub_resource type="Resource" id="Resource_om5b6"]
+[sub_resource type="Resource" id="Resource_xv06d"]
 script = ExtResource("1_y5qk6")
+modifier = SubResource("Resource_8flrp")
+
+[sub_resource type="Resource" id="Resource_cuy3q"]
+script = ExtResource("2_frw2m")
 value = -2
 
-[sub_resource type="Resource" id="Resource_frw2m"]
+[sub_resource type="Resource" id="Resource_vxedt"]
 script = ExtResource("1_y5qk6")
+modifier = SubResource("Resource_cuy3q")
+
+[sub_resource type="Resource" id="Resource_l6uy8"]
+script = ExtResource("2_frw2m")
 value = -22
 
-[sub_resource type="Resource" id="Resource_8flrp"]
+[sub_resource type="Resource" id="Resource_euxen"]
 script = ExtResource("1_y5qk6")
+modifier = SubResource("Resource_l6uy8")
+
+[sub_resource type="Resource" id="Resource_4u1st"]
+script = ExtResource("2_frw2m")
 value = -4
+
+[sub_resource type="Resource" id="Resource_45cfx"]
+script = ExtResource("1_y5qk6")
+modifier = SubResource("Resource_4u1st")
 
 [resource]
 script = ExtResource("2_om5b6")
 message = "{employee_name} asks for written confirmation that the masks sold externally are safe for prolonged exposure."
-accept_consequences = Array[ExtResource("1_y5qk6")]([SubResource("Resource_y5qk6"), SubResource("Resource_om5b6")])
-reject_consequences = Array[ExtResource("1_y5qk6")]([SubResource("Resource_frw2m"), SubResource("Resource_8flrp")])
+accept_consequences = Array[ExtResource("1_y5qk6")]([SubResource("Resource_xv06d"), SubResource("Resource_vxedt")])
+reject_consequences = Array[ExtResource("1_y5qk6")]([SubResource("Resource_euxen"), SubResource("Resource_45cfx")])
 min_day = 10

@@ -1,27 +1,44 @@
 [gd_resource type="Resource" script_class="RCard" format=3]
 
 [ext_resource type="Script" path="res://src/cards/consequence.gd" id="1_xqdca"]
+[ext_resource type="Script" path="res://src/business/modifier.gd" id="2_0x5k3"]
 [ext_resource type="Script" path="res://src/cards/card.gd" id="2_isvmt"]
 
-[sub_resource type="Resource" id="Resource_xqdca"]
-script = ExtResource("1_xqdca")
+[sub_resource type="Resource" id="Resource_rq1bm"]
+script = ExtResource("2_0x5k3")
 value = 20
 
-[sub_resource type="Resource" id="Resource_isvmt"]
+[sub_resource type="Resource" id="Resource_pn2yu"]
 script = ExtResource("1_xqdca")
+modifier = SubResource("Resource_rq1bm")
+
+[sub_resource type="Resource" id="Resource_l7wlu"]
+script = ExtResource("2_0x5k3")
 value = -4
 
-[sub_resource type="Resource" id="Resource_0x5k3"]
+[sub_resource type="Resource" id="Resource_cwwur"]
 script = ExtResource("1_xqdca")
+modifier = SubResource("Resource_l7wlu")
+
+[sub_resource type="Resource" id="Resource_m5rxr"]
+script = ExtResource("2_0x5k3")
 value = -30
 
-[sub_resource type="Resource" id="Resource_rq1bm"]
+[sub_resource type="Resource" id="Resource_hbt8q"]
 script = ExtResource("1_xqdca")
+modifier = SubResource("Resource_m5rxr")
+
+[sub_resource type="Resource" id="Resource_qx3d4"]
+script = ExtResource("2_0x5k3")
 value = -3
+
+[sub_resource type="Resource" id="Resource_b334y"]
+script = ExtResource("1_xqdca")
+modifier = SubResource("Resource_qx3d4")
 
 [resource]
 script = ExtResource("2_isvmt")
 message = "{employee_name} confides they are considering quitting due to moral concerns about the product they help manufacture."
-accept_consequences = Array[ExtResource("1_xqdca")]([SubResource("Resource_xqdca"), SubResource("Resource_isvmt")])
-reject_consequences = Array[ExtResource("1_xqdca")]([SubResource("Resource_0x5k3"), SubResource("Resource_rq1bm")])
+accept_consequences = Array[ExtResource("1_xqdca")]([SubResource("Resource_pn2yu"), SubResource("Resource_cwwur")])
+reject_consequences = Array[ExtResource("1_xqdca")]([SubResource("Resource_hbt8q"), SubResource("Resource_b334y")])
 min_day = 6
