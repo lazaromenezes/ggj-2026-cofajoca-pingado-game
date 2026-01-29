@@ -29,7 +29,7 @@ func on_card_action(_consequences: Array[RConsequence], card_object: CardScene) 
 	card_object.queue_free()
 	if notes_space.get_child_count() == 1:
 		date_manager.advance_day()
-	
+
 
 func _on_day_advanced(_day: int) -> void:
 	for card in game_manager.get_day_cards():

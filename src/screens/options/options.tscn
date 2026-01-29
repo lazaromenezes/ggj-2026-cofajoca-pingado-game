@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://cfqqfh5lknspe"]
+
+[ext_resource type="Script" uid="uid://lcibyyl2sm0x" path="res://src/screens/options/options.gd" id="1_08sv8"]
+[ext_resource type="Texture2D" uid="uid://pflsecx3gr11" path="res://assets/placeholders/a.png" id="2_27qfu"]
+
+[node name="Options" type="Control" unique_id=333433087]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_08sv8")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1551045908]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_27qfu")
+
+[node name="Control" type="Control" parent="." unique_id=849003324]
+layout_mode = 1
+anchor_left = 0.12
+anchor_top = 0.2
+anchor_right = 0.65
+anchor_bottom = 0.98
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=555531224]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer" unique_id=1256465724]
+custom_minimum_size = Vector2(1000, 800)
+layout_mode = 2
+bbcode_enabled = true
+text = "Opções"
+
+[node name="Back" type="Button" parent="Control/VBoxContainer" unique_id=1405303367]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Voltar"
+
+[connection signal="pressed" from="Control/VBoxContainer/Back" to="." method="_on_back_pressed"]

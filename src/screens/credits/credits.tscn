@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://edujrndkyjb2"]
+
+[ext_resource type="Script" uid="uid://b52ox1ovvg0dk" path="res://src/screens/credits/credits.gd" id="1_fqn4o"]
+[ext_resource type="Texture2D" uid="uid://pflsecx3gr11" path="res://assets/placeholders/a.png" id="2_sb4ap"]
+
+[node name="Credits" type="Control" unique_id=730758847]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fqn4o")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=903324050]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_sb4ap")
+
+[node name="Control" type="Control" parent="." unique_id=1112543637]
+layout_mode = 1
+anchor_left = 0.12
+anchor_top = 0.2
+anchor_right = 0.65
+anchor_bottom = 0.98
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=474791241]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/VBoxContainer" unique_id=47913656]
+custom_minimum_size = Vector2(1000, 800)
+layout_mode = 2
+bbcode_enabled = true
+text = "Créditos"
+
+[node name="Back" type="Button" parent="Control/VBoxContainer" unique_id=348425338]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Voltar"
+
+[connection signal="pressed" from="Control/VBoxContainer/Back" to="." method="_on_back_pressed"]

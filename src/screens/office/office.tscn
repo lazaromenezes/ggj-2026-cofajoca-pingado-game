@@ -1,8 +1,9 @@
-[gd_scene format=3 uid="uid://cgi1xbmm3ibxt"]
+[gd_scene format=3 uid="uid://devxhyptun7ej"]
 
-[ext_resource type="Script" uid="uid://dark68cvr2dep" path="res://main.gd" id="1_5vw27"]
+[ext_resource type="Script" uid="uid://dark68cvr2dep" path="res://src/screens/office/office.gd" id="1_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://6lqtladal2uy" path="res://src/ui_objects/card_scene/card_scene.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://doqw2ok0onffd" path="res://src/cards/card_manager.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://b5le5mejt7psn" path="res://assets/placeholders/b.png" id="3_ceo3j"]
 [ext_resource type="Script" uid="uid://duy545lfru25i" path="res://src/date/date_manager.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cx84f4lwies8m" path="res://src/employees/employee_manager.gd" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://ku4rf8wmsbul" path="res://src/cards/card_parser.gd" id="5_7mycd"]
@@ -11,15 +12,24 @@
 [ext_resource type="PackedScene" uid="uid://cw1hp3fnv0ihr" path="res://src/ui_objects/tracker_scene/tracker_scene.tscn" id="9_kek77"]
 [ext_resource type="Script" uid="uid://bbmvhaky76rm0" path="res://src/ui_objects/stamp_scene/stamp.gd" id="10_4c57u"]
 
-[node name="Root" type="Control" unique_id=1791586412]
+[node name="Office" type="Control" unique_id=1791586412]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_5vw27")
+script = ExtResource("1_3xqf3")
 card_scene = ExtResource("1_ig7tw")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1805380492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ceo3j")
 
 [node name="CardManager" type="Node" parent="." unique_id=2139038581 node_paths=PackedStringArray("date_manager")]
 script = ExtResource("2_0xm2m")
