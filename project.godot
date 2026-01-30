@@ -48,6 +48,10 @@ window/size/viewport_height=1080
 window/size/mode=2
 window/size/resizable=false
 
+[gui]
+
+theme/custom="uid://df1kopclv4xyg"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
