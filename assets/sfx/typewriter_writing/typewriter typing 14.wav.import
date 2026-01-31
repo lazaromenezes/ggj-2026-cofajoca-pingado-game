@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b37gx3g7lfg3d"
+path="res://.godot/imported/typewriter typing 14.wav-c95c45c68b791cfc27f239aaf5d19e04.sample"
+
+[deps]
+
+source_file="res://assets/sfx/typewriter_writing/typewriter typing 14.wav"
+dest_files=["res://.godot/imported/typewriter typing 14.wav-c95c45c68b791cfc27f239aaf5d19e04.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

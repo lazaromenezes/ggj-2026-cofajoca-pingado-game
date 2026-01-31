@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b4ptur5yb6226" path="res://src/ui_objects/card_scene/card_scene.gd" id="1_kub54"]
 [ext_resource type="Script" uid="uid://ciqqruwrac5ic" path="res://src/ui_objects/card_scene/stamp_area.gd" id="2_3mk1p"]
+[ext_resource type="PackedScene" uid="uid://dtgkixvkljo2s" path="res://src/ui_objects/typewriter_richtext_label/typewriter_richtext_label.tscn" id="2_xd8sg"]
 [ext_resource type="Script" uid="uid://bbmvhaky76rm0" path="res://src/ui_objects/stamp_scene/stamp.gd" id="3_bvqqy"]
 
 [node name="Card" type="Button" unique_id=417729898]
@@ -71,14 +72,10 @@ text = "####"
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Complaint" type="RichTextLabel" parent="Overlay/Control/PanelContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=26021425]
+[node name="Complaint" parent="Overlay/Control/PanelContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1207575115 instance=ExtResource("2_xd8sg")]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-theme_type_variation = &"CompanyWrittenCard"
-bbcode_enabled = true
-text = "[typewriter]{employee_name} asks for mental health leave after witnessing a co-worker collapse during containment failure.[/typewriter]"
+typing_time = 2.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/PanelContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2128011915]
 layout_mode = 2
