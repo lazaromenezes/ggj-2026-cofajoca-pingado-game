@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dtgkixvkljo2s"]
+
+[ext_resource type="AudioStream" uid="uid://dcb3n3cvcmnl4" path="res://assets/sfx/typewriter_writing/typewriter typing 1.wav" id="2_1td8d"]
+[ext_resource type="Script" uid="uid://bjmwsvhaqgp22" path="res://src/ui_objects/typewriter_richtext_label/typewriter_richtext_label.gd" id="2_257pp"]
+[ext_resource type="AudioStream" uid="uid://dscrcqvei7ac8" path="res://assets/sfx/typewriter_writing/typewriter typing 3.wav" id="3_4mc8m"]
+[ext_resource type="AudioStream" uid="uid://dqkums7ettnom" path="res://assets/sfx/typewriter_writing/typewriter typing 2.wav" id="3_qr4r2"]
+[ext_resource type="AudioStream" uid="uid://d1dqq4f1tqggh" path="res://assets/sfx/typewriter_writing/typewriter typing 11.wav" id="4_74r2d"]
+[ext_resource type="AudioStream" uid="uid://dxe47omkdqgpw" path="res://assets/sfx/typewriter_writing/typewriter typing 4.wav" id="5_ljaoq"]
+[ext_resource type="AudioStream" uid="uid://t3kto4p7oycd" path="res://assets/sfx/typewriter_writing/typewriter typing 13.wav" id="5_qlh3l"]
+[ext_resource type="AudioStream" uid="uid://coc1mcwfg2ktx" path="res://assets/sfx/typewriter_writing/typewriter typing 10.wav" id="6_lirf0"]
+[ext_resource type="AudioStream" uid="uid://b37gx3g7lfg3d" path="res://assets/sfx/typewriter_writing/typewriter typing 14.wav" id="9_ps4bw"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_qr4r2"]
+streams_count = 8
+stream_0/stream = ExtResource("2_1td8d")
+stream_1/stream = ExtResource("3_qr4r2")
+stream_2/stream = ExtResource("3_4mc8m")
+stream_3/stream = ExtResource("5_ljaoq")
+stream_4/stream = ExtResource("6_lirf0")
+stream_5/stream = ExtResource("4_74r2d")
+stream_6/stream = ExtResource("5_qlh3l")
+stream_7/stream = ExtResource("9_ps4bw")
+
+[node name="TypewriterRichtextLabel" type="RichTextLabel" unique_id=1207575115]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_type_variation = &"CompanyWrittenCard"
+bbcode_enabled = true
+text = "{employee_name} asks for mental health leave after witnessing a co-worker collapse during containment failure."
+script = ExtResource("2_257pp")
+
+[node name="SoundEffectPlayer" type="AudioStreamPlayer2D" parent="." unique_id=1673810575]
+stream = SubResource("AudioStreamRandomizer_qr4r2")
+bus = &"SFX"
+
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
