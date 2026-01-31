@@ -9,25 +9,30 @@ signal tracker_changed(tracker: Dictionary[TrackerType, float])
 @export var daily_goal: int = 6
 
 enum TrackerType {
-	COMPLAINER,
-	BUDGET,
-	WORKERS,
-	PUBLIC_RELATIONS
+	TOTAL_PROFIT,
+	WORKERS,# Afinity, still named WORKERS for backwards compatibility
+	BUDGET, # Daily Profit, still named BUDGET for backwards compatibility
+	DAILY_GOAL
 }
 
 class Session:
 	var tracker: Dictionary[TrackerType, float] = {
-		TrackerType.COMPLAINER: 0,
-		TrackerType.BUDGET: 0,
+		TrackerType.TOTAL_PROFIT: 0,
 		TrackerType.WORKERS: 0,
-		TrackerType.PUBLIC_RELATIONS: 0,
+		TrackerType.BUDGET: 0,
+		TrackerType.DAILY_GOAL: 0
 	}
 	
 	var day: int
+	
+	func move_daily_to_total() -> void:
+		tracker[TrackerType.TOTAL_PROFIT] += tracker[TrackerType.BUDGET]
+		tracker[TrackerType.BUDGET] = 0
 
 var current_session: Session
 
 func start() -> void:
+	date_manager.day_advanced.connect(_on_day_advanced)
 	date_manager.advance_day()
 	current_session = Session.new()
 	current_session.day = date_manager.day
@@ -53,3 +58,8 @@ func on_card_action(consequences: Array[RConsequence]) -> void:
 
 func next_day() -> void:
 	date_manager.advance_day()
+	
+func _on_day_advanced(day: int) -> void:
+	if current_session:
+		current_session.move_daily_to_total()
+		current_session.day += 1

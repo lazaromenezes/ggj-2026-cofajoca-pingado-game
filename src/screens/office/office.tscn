@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://7d7ir0q2enjr" path="res://src/global/utils.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bftaa587mx16w" path="res://src/global/game_manager.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cw1hp3fnv0ihr" path="res://src/ui_objects/tracker_scene/tracker_scene.tscn" id="9_kek77"]
-[ext_resource type="Script" uid="uid://bbmvhaky76rm0" path="res://src/ui_objects/stamp_scene/stamp.gd" id="10_4c57u"]
 
 [node name="Office" type="Control" unique_id=1791586412]
 layout_mode = 3
@@ -92,29 +91,6 @@ size_flags_vertical = 4
 theme_override_constants/h_separation = 30
 theme_override_constants/v_separation = 30
 columns = 6
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer" unique_id=897593687]
-custom_minimum_size = Vector2(200, 0)
-layout_mode = 2
-size_flags_vertical = 8
-
-[node name="Approve" type="Button" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer/VBoxContainer" unique_id=862128611]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 8
-text = "Accept"
-script = ExtResource("10_4c57u")
-value = "Accept"
-metadata/_custom_type_script = "uid://bbmvhaky76rm0"
-
-[node name="Reject" type="Button" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer/VBoxContainer" unique_id=1910275807]
-unique_name_in_owner = true
-layout_mode = 2
-size_flags_vertical = 8
-text = "Reject"
-script = ExtResource("10_4c57u")
-value = "Reject"
-metadata/_custom_type_script = "uid://bbmvhaky76rm0"
 
 [node name="Tracker" type="CanvasLayer" parent="." unique_id=1824467589]
 

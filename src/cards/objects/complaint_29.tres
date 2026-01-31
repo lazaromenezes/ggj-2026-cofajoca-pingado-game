@@ -5,20 +5,17 @@
 
 [sub_resource type="Resource" id="Resource_14vrr"]
 script = ExtResource("1_14vrr")
+target = 2
 value = 14
 
 [sub_resource type="Resource" id="Resource_yxni3"]
 script = ExtResource("1_14vrr")
-target = 3
-value = -3
-
-[sub_resource type="Resource" id="Resource_d56rr"]
-script = ExtResource("1_14vrr")
+target = 2
 value = -25
 
 [resource]
 script = ExtResource("2_yxni3")
 message = "{employee_name} asks for anonymity after witnessing a supervisor override safety protocols."
-accept_consequences = Array[ExtResource("1_14vrr")]([SubResource("Resource_14vrr"), SubResource("Resource_yxni3")])
-reject_consequences = Array[ExtResource("1_14vrr")]([SubResource("Resource_d56rr")])
+accept_consequences = Array[ExtResource("1_14vrr")]([SubResource("Resource_14vrr")])
+reject_consequences = Array[ExtResource("1_14vrr")]([SubResource("Resource_yxni3")])
 min_day = 7

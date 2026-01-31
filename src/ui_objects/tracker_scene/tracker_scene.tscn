@@ -9,7 +9,7 @@ script = ExtResource("1_fcy5f")
 
 [node name="Label4" type="Label" parent="." unique_id=1893727007]
 layout_mode = 2
-text = "Day: "
+text = "Dia: "
 
 [node name="Day" type="Label" parent="." unique_id=1180352611]
 unique_name_in_owner = true
@@ -17,24 +17,24 @@ layout_mode = 2
 
 [node name="Label" type="Label" parent="." unique_id=846155083]
 layout_mode = 2
-text = "Budget: "
+text = "Lucro Diário: "
 
-[node name="Budget" type="Label" parent="." unique_id=1166402414]
+[node name="DailyProfit" type="Label" parent="." unique_id=1166402414]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Label2" type="Label" parent="." unique_id=2025599824]
 layout_mode = 2
-text = "Workers: "
+text = "Afinidade: "
 
-[node name="Workers" type="Label" parent="." unique_id=2030001297]
+[node name="Afinity" type="Label" parent="." unique_id=2030001297]
 unique_name_in_owner = true
 layout_mode = 2
 
 [node name="Label3" type="Label" parent="." unique_id=1732624133]
 layout_mode = 2
-text = "Public:"
+text = "Lucro Total:"
 
-[node name="Public" type="Label" parent="." unique_id=1694151184]
+[node name="TotalProfit" type="Label" parent="." unique_id=1694151184]
 unique_name_in_owner = true
 layout_mode = 2

@@ -30,7 +30,7 @@ func reject() -> void:
 
 func _on_close_pressed() -> void:
 	overlay.visible = false
-	
+
 
 func _pressed() -> void:
 	overlay.visible = true

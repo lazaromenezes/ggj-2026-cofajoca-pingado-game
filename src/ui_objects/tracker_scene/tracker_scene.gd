@@ -2,9 +2,9 @@ extends GridContainer
 
 @export var game_manager: NGameManager
 
-@onready var budget_label: Label = %Budget
-@onready var workers_label: Label = %Workers
-@onready var public_label: Label = %Public
+@onready var daily_profit_label: Label = %DailyProfit
+@onready var afinity_label: Label = %Afinity
+@onready var total_profit_label: Label = %TotalProfit
 @onready var day_label: Label = %Day
 
 func _ready() -> void:
@@ -21,6 +21,6 @@ func _on_day_advanced(day: int) -> void:
 	
 
 func _populate_fields(tracker: Dictionary[NGameManager.TrackerType, float]) -> void:
-	budget_label.text = str(tracker[NGameManager.TrackerType.BUDGET])
-	workers_label.text = str(tracker[NGameManager.TrackerType.WORKERS])
-	public_label.text = str(tracker[NGameManager.TrackerType.PUBLIC_RELATIONS])
+	daily_profit_label.text = str(tracker[NGameManager.TrackerType.BUDGET])
+	afinity_label.text = str(tracker[NGameManager.TrackerType.WORKERS])
+	total_profit_label.text = str(tracker[NGameManager.TrackerType.TOTAL_PROFIT])

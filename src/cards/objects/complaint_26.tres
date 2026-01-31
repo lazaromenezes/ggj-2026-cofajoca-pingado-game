@@ -5,6 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_jaby6"]
 script = ExtResource("1_jaby6")
+target = 2
 value = 13
 
 [sub_resource type="Resource" id="Resource_etnth"]
@@ -14,16 +15,12 @@ value = -4
 
 [sub_resource type="Resource" id="Resource_b7xf0"]
 script = ExtResource("1_jaby6")
+target = 2
 value = -26
-
-[sub_resource type="Resource" id="Resource_4uu5x"]
-script = ExtResource("1_jaby6")
-target = 3
-value = -3
 
 [resource]
 script = ExtResource("2_etnth")
 message = "{employee_name} asks to formally refuse a task they believe violates safety regulations."
 accept_consequences = Array[ExtResource("1_jaby6")]([SubResource("Resource_jaby6"), SubResource("Resource_etnth")])
-reject_consequences = Array[ExtResource("1_jaby6")]([SubResource("Resource_b7xf0"), SubResource("Resource_4uu5x")])
+reject_consequences = Array[ExtResource("1_jaby6")]([SubResource("Resource_b7xf0")])
 min_day = 6
