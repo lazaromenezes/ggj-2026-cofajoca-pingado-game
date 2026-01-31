@@ -5,6 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_go08i"]
 script = ExtResource("1_go08i")
+target = 2
 value = 16
 
 [sub_resource type="Resource" id="Resource_5o06s"]
@@ -14,6 +15,7 @@ value = -6
 
 [sub_resource type="Resource" id="Resource_3qnj2"]
 script = ExtResource("1_go08i")
+target = 2
 value = -28
 
 [sub_resource type="Resource" id="Resource_5c3v4"]

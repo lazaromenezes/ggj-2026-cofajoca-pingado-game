@@ -5,6 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_vdnla"]
 script = ExtResource("1_vdnla")
+target = 2
 value = 12
 
 [sub_resource type="Resource" id="Resource_ub2um"]
@@ -14,6 +15,7 @@ value = -3
 
 [sub_resource type="Resource" id="Resource_mxcti"]
 script = ExtResource("1_vdnla")
+target = 2
 value = -18
 
 [resource]

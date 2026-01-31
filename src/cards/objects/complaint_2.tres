@@ -5,6 +5,7 @@
 
 [sub_resource type="Resource" id="Resource_bamnp"]
 script = ExtResource("1_bamnp")
+target = 2
 value = 15
 
 [sub_resource type="Resource" id="Resource_jkp58"]
@@ -14,6 +15,7 @@ value = -4
 
 [sub_resource type="Resource" id="Resource_3f7u0"]
 script = ExtResource("1_bamnp")
+target = 2
 value = -18
 
 [resource]

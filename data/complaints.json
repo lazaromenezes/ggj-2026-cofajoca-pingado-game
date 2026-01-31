@@ -3,11 +3,11 @@
 	"message": "{employee_name} asks for paid sick leave after showing early symptoms from prolonged exposure during mask testing. They promise full discretion.",
 	"min_day": 1,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 20 },
+	  { "target": "WORKERS", "value": 20 },
 	  { "target": "BUDGET", "value": -5 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -25 }
+	  { "target": "WORKERS", "value": -25 }
 	]
   },
 
@@ -15,11 +15,11 @@
 	"message": "{employee_name} requests maternal leave following complications during pregnancy. They fear losing their position if they step away now.",
 	"min_day": 3,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 25 },
+	  { "target": "WORKERS", "value": 25 },
 	  { "target": "BUDGET", "value": -8 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -30 },
+	  { "target": "WORKERS", "value": -30 },
 	  { "target": "WORKERS", "value": -3 }
 	]
   },
@@ -28,11 +28,11 @@
 	"message": "{employee_name} quietly asks to be reassigned away from toxin handling after repeated nausea and fainting spells.",
 	"min_day": 2,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 15 },
+	  { "target": "WORKERS", "value": 15 },
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -18 }
+	  { "target": "WORKERS", "value": -18 }
 	]
   },
 
@@ -40,11 +40,11 @@
 	"message": "{employee_name} admits they’ve been falsifying their stamina reports to avoid punishment. They ask for reduced shifts instead of discipline.",
 	"min_day": 4,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 12 },
+	  { "target": "WORKERS", "value": 12 },
 	  { "target": "BUDGET", "value": -3 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -22 }
+	  { "target": "WORKERS", "value": -22 }
 	]
   },
 
@@ -52,11 +52,11 @@
 	"message": "{employee_name} asks for a single unpaid day off to attend a family funeral. They already missed their quota this week.",
 	"min_day": 1,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 10 },
+	  { "target": "WORKERS", "value": 10 },
 	  { "target": "BUDGET", "value": -2 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -15 }
+	  { "target": "WORKERS", "value": -15 }
 	]
   },
 
@@ -64,11 +64,11 @@
 	"message": "{employee_name} reports chronic insomnia due to night shifts and requests a temporary schedule change.",
 	"min_day": 5,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 14 },
+	  { "target": "WORKERS", "value": 14 },
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -20 }
+	  { "target": "WORKERS", "value": -20 }
 	]
   },
 
@@ -76,11 +76,11 @@
 	"message": "{employee_name} confesses they’ve been skipping safety steps to keep up with production targets and fears an accident is coming.",
 	"min_day": 6,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 16 },
+	  { "target": "WORKERS", "value": 16 },
 	  { "target": "BUDGET", "value": -6 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -28 },
+	  { "target": "WORKERS", "value": -28 },
 	  { "target": "PUBLIC_RELATIONS", "value": -3 }
 	]
   },
@@ -89,11 +89,11 @@
 	"message": "{employee_name} asks for mental health leave after witnessing a co-worker collapse during containment failure.",
 	"min_day": 4,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 22 },
+	  { "target": "WORKERS", "value": 22 },
 	  { "target": "BUDGET", "value": -7 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -26 }
+	  { "target": "WORKERS", "value": -26 }
 	]
   },
 
@@ -101,11 +101,11 @@
 	"message": "{employee_name} wants compensation for medical expenses they believe were caused by long-term exposure at work.",
 	"min_day": 7,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 18 },
+	  { "target": "WORKERS", "value": 18 },
 	  { "target": "BUDGET", "value": -9 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -24 },
+	  { "target": "WORKERS", "value": -24 },
 	  { "target": "PUBLIC_RELATIONS", "value": -2 }
 	]
   },
@@ -114,23 +114,23 @@
 	"message": "{employee_name} requests protective equipment upgrades after noticing defects in the current masks used internally.",
 	"min_day": 8,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 12 },
+	  { "target": "WORKERS", "value": 12 },
 	  { "target": "WORKERS", "value": 4 },
 	  { "target": "BUDGET", "value": -10 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -18 }
+	  { "target": "WORKERS", "value": -18 }
 	]
   },
  {
 	"message": "{employee_name} asks for permission to leave early twice a week to care for a sick parent. They say productivity will suffer otherwise.",
 	"min_day": 2,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 16 },
+	  { "target": "WORKERS", "value": 16 },
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -20 }
+	  { "target": "WORKERS", "value": -20 }
 	]
   },
 
@@ -138,11 +138,11 @@
 	"message": "{employee_name} reports persistent coughing after a containment breach and requests diagnostic testing paid by the company.",
 	"min_day": 3,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 18 },
+	  { "target": "WORKERS", "value": 18 },
 	  { "target": "BUDGET", "value": -6 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -24 }
+	  { "target": "WORKERS", "value": -24 }
 	]
   },
 
@@ -150,11 +150,11 @@
 	"message": "{employee_name} admits they can no longer afford medication due to stagnant wages and asks for a temporary stipend.",
 	"min_day": 4,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 22 },
+	  { "target": "WORKERS", "value": 22 },
 	  { "target": "BUDGET", "value": -7 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -28 }
+	  { "target": "WORKERS", "value": -28 }
 	]
   },
 
@@ -162,12 +162,11 @@
 	"message": "{employee_name} asks to formally report unsafe disposal practices but fears retaliation if their name is attached.",
 	"min_day": 5,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 14 },
-	  { "target": "PUBLIC_RELATIONS", "value": -2 },
+	  { "target": "WORKERS", "value": 14 },
 	  { "target": "BUDGET", "value": -5 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -22 }
+	  { "target": "WORKERS", "value": -22 }
 	]
   },
 
@@ -175,11 +174,11 @@
 	"message": "{employee_name} requests a short unpaid leave to recover from burnout after consecutive overtime weeks.",
 	"min_day": 2,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 12 },
+	  { "target": "WORKERS", "value": 12 },
 	  { "target": "BUDGET", "value": -3 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -18 }
+	  { "target": "WORKERS", "value": -18 }
 	]
   },
 
@@ -187,12 +186,11 @@
 	"message": "{employee_name} confides they are considering quitting due to moral concerns about the product they help manufacture.",
 	"min_day": 6,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 20 },
+	  { "target": "WORKERS", "value": 20 },
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -30 },
-	  { "target": "PUBLIC_RELATIONS", "value": -3 }
+	  { "target": "WORKERS", "value": -30 },
 	]
   },
 
@@ -200,11 +198,11 @@
 	"message": "{employee_name} asks for written assurance that medical incidents will not be used against them in performance reviews.",
 	"min_day": 3,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 15 },
+	  { "target": "WORKERS", "value": 15 },
 	  { "target": "BUDGET", "value": -2 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -20 }
+	  { "target": "WORKERS", "value": -20 }
 	]
   },
 
@@ -212,11 +210,11 @@
 	"message": "{employee_name} reports numbness in their hands after repeated exposure and asks to rotate tasks.",
 	"min_day": 4,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 14 },
+	  { "target": "WORKERS", "value": 14 },
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -22 }
+	  { "target": "WORKERS", "value": -22 }
 	]
   },
 
@@ -224,12 +222,11 @@
 	"message": "{employee_name} asks for paid time to attend a mandatory medical follow-up required by government guidelines.",
 	"min_day": 5,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 17 },
+	  { "target": "WORKERS", "value": 17 },
 	  { "target": "BUDGET", "value": -5 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -26 },
-	  { "target": "PUBLIC_RELATIONS", "value": -2 }
+	  { "target": "WORKERS", "value": -26 },
 	]
   },
 
@@ -237,11 +234,10 @@
 	"message": "{employee_name} requests access to internal reports after suspecting test data is being altered.",
 	"min_day": 7,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 12 },
-	  { "target": "PUBLIC_RELATIONS", "value": -3 }
+	  { "target": "WORKERS", "value": 12 },
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -24 }
+	  { "target": "WORKERS", "value": -24 }
 	]
   },
 
@@ -249,11 +245,11 @@
 	"message": "{employee_name} asks for hazard pay after a spike in containment failures during night shifts.",
 	"min_day": 6,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 18 },
+	  { "target": "WORKERS", "value": 18 },
 	  { "target": "BUDGET", "value": -8 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -25 }
+	  { "target": "WORKERS", "value": -25 }
 	]
   },
 
@@ -261,11 +257,11 @@
 	"message": "{employee_name} asks to delay their performance review due to ongoing medical treatment.",
 	"min_day": 3,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 10 },
+	  { "target": "WORKERS", "value": 10 },
 	  { "target": "BUDGET", "value": -1 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -15 }
+	  { "target": "WORKERS", "value": -15 }
 	]
   },
 
@@ -273,12 +269,10 @@
 	"message": "{employee_name} confesses they’ve been documenting internal practices and asks if whistleblower protections apply.",
 	"min_day": 8,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 16 },
-	  { "target": "PUBLIC_RELATIONS", "value": -4 }
+	  { "target": "WORKERS", "value": 16 },
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -30 },
-	  { "target": "PUBLIC_RELATIONS", "value": -5 }
+	  { "target": "WORKERS", "value": -30 },
 	]
   },
 
@@ -286,11 +280,11 @@
 	"message": "{employee_name} requests temporary housing assistance after being relocated closer to the facility.",
 	"min_day": 4,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 14 },
+	  { "target": "WORKERS", "value": 14 },
 	  { "target": "BUDGET", "value": -6 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -20 }
+	  { "target": "WORKERS", "value": -20 }
 	]
   },
 
@@ -298,11 +292,11 @@
 	"message": "{employee_name} reports recurring nightmares related to emergency drills and asks for counseling support.",
 	"min_day": 5,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 19 },
+	  { "target": "WORKERS", "value": 19 },
 	  { "target": "BUDGET", "value": -5 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -23 }
+	  { "target": "WORKERS", "value": -23 }
 	]
   },
 
@@ -310,11 +304,11 @@
 	"message": "{employee_name} requests confirmation that their family will be compensated if exposure leads to long-term illness.",
 	"min_day": 9,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 15 },
+	  { "target": "WORKERS", "value": 15 },
 	  { "target": "BUDGET", "value": -9 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -28 }
+	  { "target": "WORKERS", "value": -28 }
 	]
   },
 
@@ -322,12 +316,11 @@
 	"message": "{employee_name} asks to formally refuse a task they believe violates safety regulations.",
 	"min_day": 6,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 13 },
+	  { "target": "WORKERS", "value": 13 },
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -26 },
-	  { "target": "PUBLIC_RELATIONS", "value": -3 }
+	  { "target": "WORKERS", "value": -26 },
 	]
   },
 
@@ -335,12 +328,10 @@
 	"message": "{employee_name} asks for written confirmation that the masks sold externally are safe for prolonged exposure.",
 	"min_day": 10,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 10 },
-	  { "target": "PUBLIC_RELATIONS", "value": -2 }
+	  { "target": "WORKERS", "value": 10 },
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -22 },
-	  { "target": "PUBLIC_RELATIONS", "value": -4 }
+	  { "target": "WORKERS", "value": -22 },
 	]
   },
 
@@ -348,11 +339,11 @@
 	"message": "{employee_name} quietly asks if refusing overtime will put their job at risk.",
 	"min_day": 2,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 11 },
+	  { "target": "WORKERS", "value": 11 },
 	  { "target": "BUDGET", "value": -2 }
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -17 }
+	  { "target": "WORKERS", "value": -17 }
 	]
   },
 
@@ -360,11 +351,10 @@
 	"message": "{employee_name} asks for anonymity after witnessing a supervisor override safety protocols.",
 	"min_day": 7,
 	"accept_consequences": [
-	  { "target": "COMPLAINER", "value": 14 },
-	  { "target": "PUBLIC_RELATIONS", "value": -3 }
+	  { "target": "WORKERS", "value": 14 },
 	],
 	"reject_consequences": [
-	  { "target": "COMPLAINER", "value": -25 }
+	  { "target": "WORKERS", "value": -25 }
 	]
   }
 ]
