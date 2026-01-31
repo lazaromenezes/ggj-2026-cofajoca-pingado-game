@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://7d7ir0q2enjr" path="res://src/global/utils.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bftaa587mx16w" path="res://src/global/game_manager.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cw1hp3fnv0ihr" path="res://src/ui_objects/tracker_scene/tracker_scene.tscn" id="9_kek77"]
+[ext_resource type="AudioStream" uid="uid://drwcarjp2g3m6" path="res://assets/sfx/hum/ventilation - medium.wav" id="11_ceo3j"]
 
 [node name="Office" type="Control" unique_id=1791586412]
 layout_mode = 3
@@ -119,3 +120,7 @@ theme_override_constants/margin_bottom = 20
 [node name="Tracker" parent="Tracker/Control/MarginContainer" unique_id=1105491028 node_paths=PackedStringArray("game_manager") instance=ExtResource("9_kek77")]
 layout_mode = 2
 game_manager = NodePath("../../../../GameManager")
+
+[node name="VentilationHum" type="AudioStreamPlayer" parent="." unique_id=1533837735]
+stream = ExtResource("11_ceo3j")
+bus = &"Hum"
