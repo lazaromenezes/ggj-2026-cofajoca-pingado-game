@@ -123,4 +123,5 @@ game_manager = NodePath("../../../../GameManager")
 
 [node name="VentilationHum" type="AudioStreamPlayer" parent="." unique_id=1533837735]
 stream = ExtResource("11_ceo3j")
+autoplay = true
 bus = &"Hum"
