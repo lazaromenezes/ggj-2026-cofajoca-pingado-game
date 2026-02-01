@@ -2,8 +2,12 @@
 
 [ext_resource type="Script" uid="uid://b4ptur5yb6226" path="res://src/ui_objects/card_scene/card_scene.gd" id="1_kub54"]
 [ext_resource type="Script" uid="uid://ciqqruwrac5ic" path="res://src/ui_objects/card_scene/stamp_area.gd" id="2_3mk1p"]
+[ext_resource type="Texture2D" uid="uid://dt6j4w12sos6f" path="res://assets/overlay/papel-overlay.png" id="2_rla43"]
 [ext_resource type="PackedScene" uid="uid://dtgkixvkljo2s" path="res://src/ui_objects/typewriter_richtext_label/typewriter_richtext_label.tscn" id="2_xd8sg"]
-[ext_resource type="Script" uid="uid://bbmvhaky76rm0" path="res://src/ui_objects/stamp_scene/stamp.gd" id="3_bvqqy"]
+[ext_resource type="Texture2D" uid="uid://n12y8y713wou" path="res://assets/overlay/obj-carimbado-aprovado.png" id="5_5pfj1"]
+[ext_resource type="Texture2D" uid="uid://c825fbokvlnb7" path="res://assets/overlay/obj-carimbado-recusado.png" id="6_72o3u"]
+[ext_resource type="PackedScene" uid="uid://gqeqg6ecptct" path="res://src/ui_objects/stamp_scene/accept_stamp.tscn" id="7_72o3u"]
+[ext_resource type="PackedScene" uid="uid://cw4swvsgxypn4" path="res://src/ui_objects/stamp_scene/reject_stamp.tscn" id="8_qxlft"]
 
 [node name="Card" type="Button" unique_id=417729898]
 offset_right = 63.0
@@ -36,87 +40,95 @@ theme_type_variation = &"BrownOverlay"
 [node name="HBoxContainer" type="HBoxContainer" parent="Overlay/Control/OverlayContainer" unique_id=227759058]
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 4
+size_flags_vertical = 8
 
-[node name="Card" type="PanelContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer" unique_id=353551327]
-custom_minimum_size = Vector2(800, 640)
+[node name="TextureRect" type="TextureRect" parent="Overlay/Control/OverlayContainer/HBoxContainer" unique_id=1521034998]
 layout_mode = 2
+size_flags_vertical = 8
+texture = ExtResource("2_rla43")
+
+[node name="Card" type="Control" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect" unique_id=513592149]
+custom_minimum_size = Vector2(800, 640)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -320.0
+offset_right = 400.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-theme_type_variation = &"Card"
 
-[node name="MarginContainer" type="MarginContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card" unique_id=1165425009]
-layout_mode = 2
+[node name="MarginContainer" type="MarginContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card" unique_id=1165425009]
+layout_mode = 0
+offset_right = 800.0
+offset_bottom = 640.0
 theme_override_constants/margin_left = 20
 theme_override_constants/margin_top = 20
 theme_override_constants/margin_right = 20
 theme_override_constants/margin_bottom = 20
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer" unique_id=451667016]
+[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer" unique_id=451667016]
 layout_mode = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer" unique_id=284369355]
+[node name="HBoxContainer2" type="HBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer" unique_id=284369355]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=946107036]
+[node name="Label" type="Label" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=946107036]
 layout_mode = 2
 theme_type_variation = &"BaseLabel"
 text = "From: "
 
-[node name="From" type="Label" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1203961068]
+[node name="From" type="Label" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1203961068]
 unique_name_in_owner = true
 layout_mode = 2
 theme_type_variation = &"BaseLabel"
 text = "####"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer" unique_id=94909933]
+[node name="HBoxContainer" type="HBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer" unique_id=94909933]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="Complaint" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1207575115 instance=ExtResource("2_xd8sg")]
+[node name="Complaint" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1207575115 instance=ExtResource("2_xd8sg")]
 unique_name_in_owner = true
 layout_mode = 2
 typing_time = 2.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2128011915]
+[node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2128011915]
 layout_mode = 2
 
-[node name="Close" type="Button" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=923676217]
+[node name="Close" type="Button" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=923676217]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
 text = "X"
 
-[node name="StampArea" type="Panel" parent="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1024149853 node_paths=PackedStringArray("card_scene")]
+[node name="StampArea" type="PanelContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=838824620 node_paths=PackedStringArray("card_scene")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 100)
 layout_mode = 2
 size_flags_vertical = 10
+theme_type_variation = &"StampArea"
 script = ExtResource("2_3mk1p")
-card_scene = NodePath("../../../../../../../../../..")
+card_scene = NodePath("../../../../../../../../../../..")
+accept_texture = ExtResource("5_5pfj1")
+reject_texture = ExtResource("6_72o3u")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer" unique_id=993373650]
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
-size_flags_vertical = 8
+size_flags_vertical = 4
 
-[node name="Approve" type="Button" parent="Overlay/Control/OverlayContainer/HBoxContainer/VBoxContainer" unique_id=1805052356]
-unique_name_in_owner = true
+[node name="AcceptStamp" parent="Overlay/Control/OverlayContainer/HBoxContainer/VBoxContainer" unique_id=405811323 instance=ExtResource("7_72o3u")]
 layout_mode = 2
-size_flags_vertical = 8
-text = "Accept"
-script = ExtResource("3_bvqqy")
-value = "Accept"
-metadata/_custom_type_script = "uid://bbmvhaky76rm0"
 
-[node name="Reject" type="Button" parent="Overlay/Control/OverlayContainer/HBoxContainer/VBoxContainer" unique_id=2040566151]
-unique_name_in_owner = true
+[node name="RejectStamp" parent="Overlay/Control/OverlayContainer/HBoxContainer/VBoxContainer" unique_id=725378701 instance=ExtResource("8_qxlft")]
 layout_mode = 2
-size_flags_vertical = 8
-text = "Reject"
-script = ExtResource("3_bvqqy")
-value = "Reject"
-metadata/_custom_type_script = "uid://bbmvhaky76rm0"
 
-[connection signal="pressed" from="Overlay/Control/OverlayContainer/HBoxContainer/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/Close" to="." method="_on_close_pressed"]

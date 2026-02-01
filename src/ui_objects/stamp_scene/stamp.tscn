@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://bqxovdhpcsqcp"]
 
 [ext_resource type="Script" uid="uid://bbmvhaky76rm0" path="res://src/ui_objects/stamp_scene/stamp.gd" id="1_7yn7g"]
+[ext_resource type="Texture2D" uid="uid://ul8krlok7ww2" path="res://assets/overlay/obj-carimbo.png" id="1_uk6ay"]
 
-[node name="Stamp" type="Button" unique_id=566548684]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="Stamp" type="TextureRect" unique_id=405811323]
+texture = ExtResource("1_uk6ay")
 script = ExtResource("1_7yn7g")

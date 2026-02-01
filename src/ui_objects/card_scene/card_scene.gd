@@ -15,7 +15,6 @@ func _ready() -> void:
 	var format_data := {
 		"employee_name": sender.data.name
 	}
-	
 	from.text = sender.data.name
 	complaint.text = card.message.format(format_data)
 

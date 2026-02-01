@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gqeqg6ecptct"]
+
+[ext_resource type="PackedScene" uid="uid://bqxovdhpcsqcp" path="res://src/ui_objects/stamp_scene/stamp.tscn" id="1_0nvoe"]
+[ext_resource type="Texture2D" uid="uid://b8pvrqjrql1ay" path="res://assets/overlay/obj-carimbo-aprovar.png" id="2_hy2ot"]
+
+[node name="AcceptStamp" unique_id=405811323 instance=ExtResource("1_0nvoe")]
+value = "Accept"
+preview_texture = ExtResource("2_hy2ot")
+
+[node name="TextureRect" type="TextureRect" parent="." index="0" unique_id=391967813]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_hy2ot")

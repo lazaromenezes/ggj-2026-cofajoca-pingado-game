@@ -56,6 +56,19 @@ texture_margin_top = 30.0
 texture_margin_right = 45.0
 texture_margin_bottom = 30.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_611f8"]
+bg_color = Color(0.9843137, 0.9372549, 0.8745098, 0)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.7372549, 0.5882353, 0.32156864, 0.654902)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [resource]
 default_font = ExtResource("1_xgdp2")
 default_font_size = 16
@@ -76,3 +89,5 @@ MainMenuButton/fonts/font = ExtResource("2_0arac")
 MainMenuButton/styles/hover = SubResource("StyleBoxTexture_pefyd")
 MainMenuButton/styles/normal = SubResource("StyleBoxTexture_2est8")
 MainMenuButton/styles/pressed = SubResource("StyleBoxTexture_upuy7")
+StampArea/base_type = &"PanelContainer"
+StampArea/styles/panel = SubResource("StyleBoxFlat_611f8")

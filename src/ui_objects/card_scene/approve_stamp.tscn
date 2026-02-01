@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://lu6e7nd2ur5h"]
+
+[node name="Approve" type="TextureRect" unique_id=1697582351]
+offset_right = 62.0
+offset_bottom = 28.0
+size_flags_vertical = 8
+focus_mode = 2
