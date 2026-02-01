@@ -293,7 +293,7 @@ date_manager = NodePath("../DateManager")
 
 [node name="CardManager" type="Node" parent="." unique_id=2139038581 node_paths=PackedStringArray("date_manager")]
 script = ExtResource("2_0xm2m")
-card_pool_path = "res://src/cards/objects/"
+card_pool_path = "user://cards/objects"
 date_manager = NodePath("../DateManager")
 
 [node name="DateManager" type="Node" parent="." unique_id=179586996]
@@ -306,16 +306,17 @@ employees_path = "res://src/employees/objects/"
 [node name="CardParser" type="Node" parent="." unique_id=62511926]
 script = ExtResource("5_7mycd")
 card_json_path = "res://data/complaints.json"
-card_object_path = "res://src/cards/objects/"
+card_object_path = "user://cards/objects"
 
 [node name="Utils" type="Node" parent="." unique_id=2031020797]
 script = ExtResource("5_lquwl")
 
-[node name="GameManager" type="Node" parent="." unique_id=1868886599 node_paths=PackedStringArray("date_manager", "card_manager", "employee_manager")]
+[node name="GameManager" type="Node" parent="." unique_id=1868886599 node_paths=PackedStringArray("date_manager", "card_manager", "employee_manager", "event_tracker")]
 script = ExtResource("7_272bh")
 date_manager = NodePath("../DateManager")
 card_manager = NodePath("../CardManager")
 employee_manager = NodePath("../EmployeeManager")
+event_tracker = NodePath("../EverythingTracker")
 metadata/_custom_type_script = "uid://bftaa587mx16w"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1456334244]

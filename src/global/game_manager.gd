@@ -5,6 +5,7 @@ signal tracker_changed(tracker: Dictionary[TrackerType, float])
 @export var date_manager: NDateManger
 @export var card_manager: NCardManager
 @export var employee_manager: NEmployeeManager
+@export var event_tracker: NEverythingTracker
 
 @export var daily_goal: int = 3
 
@@ -37,6 +38,8 @@ func start() -> void:
 	current_session = Session.new()
 	current_session.day = date_manager.day
 	tracker_changed.emit(current_session.tracker)
+	
+	event_tracker.game_over.connect(_on_game_over)
 
 
 func next_employee() -> OEmployee:
@@ -63,3 +66,6 @@ func _on_day_advanced(day: int) -> void:
 	if current_session:
 		current_session.move_daily_to_total()
 		current_session.day += 1
+
+func _on_game_over() -> void:
+	pass

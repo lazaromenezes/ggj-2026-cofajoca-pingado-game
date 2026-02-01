@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://clrlwlmt2ox7s"]
 
 [ext_resource type="Script" uid="uid://cpk48k12v833p" path="res://src/main.gd" id="1_gh0ne"]
+[ext_resource type="Script" uid="uid://ku4rf8wmsbul" path="res://src/cards/card_parser.gd" id="2_gh0ne"]
 
 [node name="Main" type="Control" unique_id=2047806216]
 layout_mode = 3
@@ -10,6 +11,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gh0ne")
+
+[node name="CardParser" type="Node" parent="." unique_id=1616056811]
+script = ExtResource("2_gh0ne")
+card_json_path = "res://data/complaints.json"
+card_object_path = "user://cards/objects"
 
 [node name="Stage" type="Control" parent="." unique_id=1635711202]
 unique_name_in_owner = true

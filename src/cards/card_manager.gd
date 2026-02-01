@@ -7,6 +7,7 @@ var card_pool : Array[RCard]
 var available_cards : Array[RCard]
 
 func _ready() -> void:
+	DirAccess.make_dir_recursive_absolute(card_pool_path)
 	card_pool.assign(GUtils.load_resources(card_pool_path))
 	date_manager.day_advanced.connect(handle_new_day)
 

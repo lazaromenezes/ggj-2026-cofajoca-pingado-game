@@ -4,13 +4,18 @@ class_name NCardParser extends Node
 @export var card_object_path: String
 
 func _ready() -> void:
+	DirAccess.make_dir_recursive_absolute(card_object_path)
+
+func parse_data() -> void:
 	var cards_data : Array = GUtils.load_json(card_json_path)
 	delete_existing_cards(card_object_path)
+	
 	var count := 0
+	
 	for card : Dictionary in cards_data:
-		ResourceSaver.save(parse_card_data(card), card_object_path + '\\complaint_%d.tres' % [count])
+		ResourceSaver.save(parse_card_data(card), card_object_path + '/complaint_%d.tres' % [count])
 		count +=1
-
+	
 func delete_existing_cards(path: String) -> void:
 	var dir := DirAccess.open(path)
 	var files := DirAccess.get_files_at(path)

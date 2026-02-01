@@ -4,7 +4,6 @@ signal game_over()
 
 @export var date_manager : NDateManger
 @export var board_satisfaction : int
-@export var employee_satisfaction: int
 @export var budget_target_initial : int
 
 var budget_target : int
