@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b5le5mejt7psn" path="res://assets/placeholders/b.png" id="3_ceo3j"]
 [ext_resource type="Script" uid="uid://duy545lfru25i" path="res://src/date/date_manager.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cx84f4lwies8m" path="res://src/employees/employee_manager.gd" id="4_1bvp3"]
+[ext_resource type="Script" uid="uid://6r64uks354yi" path="res://src/screens/office/everything_tracker.gd" id="4_orprs"]
 [ext_resource type="Script" uid="uid://ku4rf8wmsbul" path="res://src/cards/card_parser.gd" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://7d7ir0q2enjr" path="res://src/global/utils.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bftaa587mx16w" path="res://src/global/game_manager.gd" id="7_272bh"]
@@ -30,6 +31,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("3_ceo3j")
+
+[node name="EverythingTracker" type="Node" parent="." unique_id=82886732 node_paths=PackedStringArray("date_manager")]
+script = ExtResource("4_orprs")
+date_manager = NodePath("../DateManager")
 
 [node name="CardManager" type="Node" parent="." unique_id=2139038581 node_paths=PackedStringArray("date_manager")]
 script = ExtResource("2_0xm2m")
@@ -124,4 +129,3 @@ game_manager = NodePath("../../../../GameManager")
 [node name="VentilationHum" type="AudioStreamPlayer" parent="." unique_id=1533837735]
 stream = ExtResource("11_ceo3j")
 autoplay = true
-bus = &"Hum"

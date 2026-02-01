@@ -4,3 +4,4 @@ class_name RCard extends Resource
 @export var accept_consequences : Array[RConsequence]
 @export var reject_consequences : Array[RConsequence]
 @export var min_day : int
+@export var event_name: String
