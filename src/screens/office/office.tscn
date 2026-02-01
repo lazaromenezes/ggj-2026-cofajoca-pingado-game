@@ -23,6 +23,9 @@
 [ext_resource type="Texture2D" uid="uid://dyhn6jcxj3nwg" path="res://assets/bg-jogo/bg-layer2-jogo.png" id="15_0nfi7"]
 [ext_resource type="Texture2D" uid="uid://df1ajovvs82in" path="res://assets/bg-jogo/bg-layer3-jogo.png" id="16_6m026"]
 [ext_resource type="Texture2D" uid="uid://cip0lki72eguy" path="res://assets/overlay/mascara.png" id="23_cv4c0"]
+[ext_resource type="AudioStream" uid="uid://bjfomvoxaqkmc" path="res://assets/songs/Dark_20Fog.mp3" id="24_mgq0h"]
+[ext_resource type="AudioStream" uid="uid://cuav60074gtd3" path="res://assets/songs/Chill.mp3" id="25_csq1p"]
+[ext_resource type="AudioStream" uid="uid://b3crotxbu8hxg" path="res://assets/songs/Ultralounge.mp3" id="26_csq1p"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qresa"]
 atlas = ExtResource("12_0q0dy")
@@ -268,6 +271,12 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_7nxoe"]
+streams_count = 3
+stream_0/stream = ExtResource("24_mgq0h")
+stream_1/stream = ExtResource("25_csq1p")
+stream_2/stream = ExtResource("26_csq1p")
+
 [node name="Office" type="Control" unique_id=1791586412]
 layout_mode = 3
 anchors_preset = 15
@@ -465,3 +474,8 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("23_cv4c0")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=466213746]
+stream = SubResource("AudioStreamRandomizer_7nxoe")
+autoplay = true
+bus = &"Office"

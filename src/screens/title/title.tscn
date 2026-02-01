@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bmhlpb85m3neu" path="res://src/screens/title/title.gd" id="1_lkisi"]
 [ext_resource type="Texture2D" uid="uid://dxinpw5vkk6es" path="res://assets/menu/img-bg-menu.png" id="2_lkisi"]
+[ext_resource type="AudioStream" uid="uid://8d46kuofd13u" path="res://assets/songs/Mirage.mp3" id="3_631j2"]
 
 [node name="Title" type="Control" unique_id=1805452755]
 layout_mode = 3
@@ -76,6 +77,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme_type_variation = &"MainMenuButton"
 text = "Sair"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1845673691]
+stream = ExtResource("3_631j2")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Control/VBoxContainer2/HBox/Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer2/HBox/Options" to="." method="_on_options_pressed"]

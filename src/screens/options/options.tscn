@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://lcibyyl2sm0x" path="res://src/screens/options/options.gd" id="1_08sv8"]
 [ext_resource type="Texture2D" uid="uid://pflsecx3gr11" path="res://assets/placeholders/a.png" id="2_27qfu"]
+[ext_resource type="AudioStream" uid="uid://b3crotxbu8hxg" path="res://assets/songs/Ultralounge.mp3" id="3_xmlur"]
 
 [node name="Options" type="Control" unique_id=333433087]
 layout_mode = 3
@@ -48,5 +49,10 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Voltar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=2052993807]
+stream = ExtResource("3_xmlur")
+autoplay = true
+bus = &"Music"
 
 [connection signal="pressed" from="Control/VBoxContainer/Back" to="." method="_on_back_pressed"]

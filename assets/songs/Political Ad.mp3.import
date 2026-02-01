@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dloukyrrix2lj"
+path="res://.godot/imported/Political Ad.mp3-17179f2a1f47f6c5b2a92d1a662d62d5.mp3str"
+
+[deps]
+
+source_file="res://assets/songs/Political Ad.mp3"
+dest_files=["res://.godot/imported/Political Ad.mp3-17179f2a1f47f6c5b2a92d1a662d62d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

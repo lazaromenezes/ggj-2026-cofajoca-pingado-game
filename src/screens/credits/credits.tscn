@@ -2,6 +2,15 @@
 
 [ext_resource type="Script" uid="uid://b52ox1ovvg0dk" path="res://src/screens/credits/credits.gd" id="1_fqn4o"]
 [ext_resource type="Texture2D" uid="uid://pflsecx3gr11" path="res://assets/placeholders/a.png" id="2_sb4ap"]
+[ext_resource type="AudioStream" uid="uid://cuav60074gtd3" path="res://assets/songs/Chill.mp3" id="3_ajgat"]
+[ext_resource type="AudioStream" uid="uid://b3crotxbu8hxg" path="res://assets/songs/Ultralounge.mp3" id="4_kyb2m"]
+[ext_resource type="AudioStream" uid="uid://8d46kuofd13u" path="res://assets/songs/Mirage.mp3" id="5_kyb2m"]
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_svoi7"]
+streams_count = 3
+stream_0/stream = ExtResource("3_ajgat")
+stream_1/stream = ExtResource("4_kyb2m")
+stream_2/stream = ExtResource("5_kyb2m")
 
 [node name="Credits" type="Control" unique_id=730758847]
 layout_mode = 3
@@ -48,5 +57,9 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 text = "Voltar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1411906330]
+stream = SubResource("AudioStreamRandomizer_svoi7")
+bus = &"Music"
 
 [connection signal="pressed" from="Control/VBoxContainer/Back" to="." method="_on_back_pressed"]
