@@ -10,7 +10,20 @@
 [ext_resource type="Texture2D" uid="uid://n12y8y713wou" path="res://assets/overlay/obj-carimbado-aprovado.png" id="5_5pfj1"]
 [ext_resource type="Texture2D" uid="uid://c825fbokvlnb7" path="res://assets/overlay/obj-carimbado-recusado.png" id="6_72o3u"]
 [ext_resource type="PackedScene" uid="uid://gqeqg6ecptct" path="res://src/ui_objects/stamp_scene/accept_stamp.tscn" id="7_72o3u"]
+[ext_resource type="Texture2D" uid="uid://0ai8wv38367i" path="res://assets/overlay/obj-botao-x.png" id="7_pgjwv"]
 [ext_resource type="PackedScene" uid="uid://cw4swvsgxypn4" path="res://src/ui_objects/stamp_scene/reject_stamp.tscn" id="8_qxlft"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgwep"]
+atlas = ExtResource("7_pgjwv")
+region = Rect2(2, 2, 97, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgjwv"]
+atlas = ExtResource("7_pgjwv")
+region = Rect2(102, 2, 97, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxehy"]
+atlas = ExtResource("7_pgjwv")
+region = Rect2(102, 2, 97, 96)
 
 [node name="Card" type="TextureButton" unique_id=62405892]
 offset_right = 157.92
@@ -111,11 +124,13 @@ typing_time = 2.0
 [node name="VBoxContainer" type="VBoxContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer" unique_id=2128011915]
 layout_mode = 2
 
-[node name="Close" type="Button" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=923676217]
+[node name="Close" type="TextureButton" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=447740384]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 8
-text = "X"
+texture_normal = SubResource("AtlasTexture_dgwep")
+texture_pressed = SubResource("AtlasTexture_pgjwv")
+texture_hover = SubResource("AtlasTexture_pxehy")
 
 [node name="StampArea" type="PanelContainer" parent="Overlay/Control/OverlayContainer/HBoxContainer/TextureRect/Card/MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer" unique_id=838824620 node_paths=PackedStringArray("card_scene")]
 unique_name_in_owner = true

@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://doqw2ok0onffd" path="res://src/cards/card_manager.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://duy545lfru25i" path="res://src/date/date_manager.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cx84f4lwies8m" path="res://src/employees/employee_manager.gd" id="4_1bvp3"]
-[ext_resource type="Script" path="res://src/screens/office/everything_tracker.gd" id="4_orprs"]
+[ext_resource type="Script" uid="uid://6r64uks354yi" path="res://src/screens/office/everything_tracker.gd" id="4_orprs"]
 [ext_resource type="Script" uid="uid://ku4rf8wmsbul" path="res://src/cards/card_parser.gd" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://7d7ir0q2enjr" path="res://src/global/utils.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bftaa587mx16w" path="res://src/global/game_manager.gd" id="7_272bh"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://dc1b4l3m8d2t1" path="res://assets/bg-jogo/bg-layer1-sombra3-jogo.png" id="14_v2ekf"]
 [ext_resource type="Texture2D" uid="uid://dyhn6jcxj3nwg" path="res://assets/bg-jogo/bg-layer2-jogo.png" id="15_0nfi7"]
 [ext_resource type="Texture2D" uid="uid://df1ajovvs82in" path="res://assets/bg-jogo/bg-layer3-jogo.png" id="16_6m026"]
+[ext_resource type="Texture2D" uid="uid://cip0lki72eguy" path="res://assets/overlay/mascara.png" id="23_cv4c0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qresa"]
 atlas = ExtResource("12_0q0dy")
@@ -451,3 +452,15 @@ position = Vector2(960, 540)
 sprite_frames = SubResource("SpriteFrames_f7t1r")
 frame_progress = 0.30672574
 metadata/_edit_lock_ = true
+
+[node name="Mask" type="CanvasLayer" parent="." unique_id=690466404]
+layer = 10
+
+[node name="TextureRect" type="TextureRect" parent="Mask" unique_id=1169242069]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("23_cv4c0")

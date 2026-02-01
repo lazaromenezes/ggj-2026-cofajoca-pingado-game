@@ -3,12 +3,10 @@ class_name NEverythingTracker extends Node
 signal game_over()
 
 @export var date_manager : NDateManger
-
 @export var board_satisfaction : int
-
 @export var employee_satisfaction: int
-
 @export var budget_target_initial : int
+
 var budget_target : int
 var budget: int
 
@@ -18,6 +16,8 @@ var negative_budget_days : int
 func _ready() -> void:
 	budget_target = budget_target_initial
 	date_manager.day_advanced.connect(_on_day_advanced)
+
+
 func calculate_buget_target() -> void:
 	var modifier := lerpf(0.7, 1.3, board_satisfaction / 100.0)
 	budget_target = int(budget_target_initial * modifier)
