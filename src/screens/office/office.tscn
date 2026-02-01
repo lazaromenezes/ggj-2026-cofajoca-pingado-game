@@ -368,6 +368,7 @@ sprite_frames = SubResource("SpriteFrames_icuty")
 
 [node name="Tracker" type="CanvasLayer" parent="." unique_id=1824467589]
 layer = 2
+visible = false
 
 [node name="Control" type="Control" parent="Tracker" unique_id=1196165586]
 layout_mode = 3
