@@ -52,6 +52,7 @@ theme_type_variation = &"MainMenuButton"
 text = "Jogar"
 
 [node name="Options" type="Button" parent="Control/VBoxContainer2/HBox" unique_id=1537440392]
+visible = false
 custom_minimum_size = Vector2(290, 130)
 layout_mode = 2
 size_flags_horizontal = 0
