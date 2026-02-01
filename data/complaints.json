@@ -50,7 +50,7 @@
 	  { "target": "WORKERS", "value": -22 }
 	],
 	"type": "LETTER"
-  },
+},
 
   {
 	"message": "Departamento de Logística \n Negociação de compra de matéria-prima Lote nº 123 \n Material apresenta boas condições e se encontra dentro das normas exigidas.",
