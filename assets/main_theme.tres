@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cuekt66nbvo1y" path="res://assets/placeholders/papel-overlay.png" id="1_d80jv"]
 [ext_resource type="FontFile" uid="uid://chhe44downdey" path="res://assets/fonts/F25_Executive.otf" id="1_xgdp2"]
+[ext_resource type="FontFile" uid="uid://dy7f2b74gbym4" path="res://assets/fonts/horrendo.ttf" id="2_0arac"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0arac"]
 content_margin_left = 75.0
@@ -9,6 +10,48 @@ content_margin_top = 75.0
 content_margin_right = 75.0
 content_margin_bottom = 20.0
 texture = ExtResource("1_d80jv")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0arac"]
+load_path = "res://.godot/imported/obj-botão-menu.png-fd51e7a817068735646e2c5b5c26947e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_611f8"]
+atlas = SubResource("CompressedTexture2D_0arac")
+region = Rect2(6, 9, 291, 133)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pefyd"]
+texture = SubResource("AtlasTexture_611f8")
+texture_margin_left = 45.0
+texture_margin_top = 30.0
+texture_margin_right = 45.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_upuy7"]
+load_path = "res://.godot/imported/obj-botão-menu.png-fd51e7a817068735646e2c5b5c26947e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jsj3"]
+atlas = SubResource("CompressedTexture2D_upuy7")
+region = Rect2(6, 9, 291, 133)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2est8"]
+texture = SubResource("AtlasTexture_2jsj3")
+texture_margin_left = 45.0
+texture_margin_top = 30.0
+texture_margin_right = 45.0
+texture_margin_bottom = 30.0
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_611f8"]
+load_path = "res://.godot/imported/obj-botão-menu.png-fd51e7a817068735646e2c5b5c26947e.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pefyd"]
+atlas = SubResource("CompressedTexture2D_611f8")
+region = Rect2(315, 8, 295, 133)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_upuy7"]
+texture = SubResource("AtlasTexture_pefyd")
+texture_margin_left = 45.0
+texture_margin_top = 30.0
+texture_margin_right = 45.0
+texture_margin_bottom = 30.0
 
 [resource]
 default_font = ExtResource("1_xgdp2")
@@ -19,3 +62,12 @@ Card/base_type = &"PanelContainer"
 Card/styles/panel = SubResource("StyleBoxTexture_0arac")
 CompanyWrittenCard/base_type = &"RichTextLabel"
 CompanyWrittenCard/colors/default_color = Color(0, 0, 0, 1)
+MainMenuButton/base_type = &"Button"
+MainMenuButton/colors/font_color = Color(0.69411767, 0.5058824, 0.30588236, 1)
+MainMenuButton/colors/font_hover_color = Color(0.9607843, 0.9098039, 0.6039216, 1)
+MainMenuButton/colors/font_pressed_color = Color(0.09411765, 0.13333334, 0.16862746, 1)
+MainMenuButton/font_sizes/font_size = 42
+MainMenuButton/fonts/font = ExtResource("2_0arac")
+MainMenuButton/styles/hover = SubResource("StyleBoxTexture_pefyd")
+MainMenuButton/styles/normal = SubResource("StyleBoxTexture_2est8")
+MainMenuButton/styles/pressed = SubResource("StyleBoxTexture_upuy7")

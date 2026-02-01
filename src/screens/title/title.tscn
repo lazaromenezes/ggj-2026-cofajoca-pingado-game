@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dv1taqaex26yw"]
 
-[ext_resource type="Texture2D" uid="uid://lr7c8vfdt22p" path="res://assets/placeholders/title.png" id="1_kpc0w"]
 [ext_resource type="Script" uid="uid://bmhlpb85m3neu" path="res://src/screens/title/title.gd" id="1_lkisi"]
+[ext_resource type="Texture2D" uid="uid://dxinpw5vkk6es" path="res://assets/menu/img-bg-menu.png" id="2_lkisi"]
 
 [node name="Title" type="Control" unique_id=1805452755]
 layout_mode = 3
@@ -19,48 +19,65 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_kpc0w")
+texture = ExtResource("2_lkisi")
 
 [node name="Control" type="Control" parent="." unique_id=559089091]
 layout_mode = 1
-anchor_left = 0.65
-anchor_top = 0.3
-anchor_right = 0.87
-anchor_bottom = 0.8
-pivot_offset_ratio = Vector2(0.75, 0)
-
-[node name="VBoxContainer" type="VBoxContainer" parent="Control" unique_id=515214031]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -24.0
-offset_top = -15.5
-offset_right = 24.0
-offset_bottom = 15.5
+anchor_left = 0.39
+anchor_top = 0.67
+anchor_right = 1.0
+anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 20
+pivot_offset_ratio = Vector2(0.75, 0)
 
-[node name="Play" type="Button" parent="Control/VBoxContainer" unique_id=246753386]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Control" unique_id=916434821]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 40
+
+[node name="HBox" type="HBoxContainer" parent="Control/VBoxContainer2" unique_id=1550230960]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/separation = 40
+
+[node name="Play" type="Button" parent="Control/VBoxContainer2/HBox" unique_id=246753386]
+custom_minimum_size = Vector2(290, 130)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"MainMenuButton"
 text = "Jogar"
 
-[node name="Options" type="Button" parent="Control/VBoxContainer" unique_id=1537440392]
+[node name="Options" type="Button" parent="Control/VBoxContainer2/HBox" unique_id=1537440392]
+custom_minimum_size = Vector2(290, 130)
 layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"MainMenuButton"
 text = "Opções"
 
-[node name="Credits" type="Button" parent="Control/VBoxContainer" unique_id=2049361112]
+[node name="Credits" type="Button" parent="Control/VBoxContainer2/HBox" unique_id=2049361112]
+custom_minimum_size = Vector2(290, 130)
 layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"MainMenuButton"
 text = "Créditos"
 
-[node name="Exit" type="Button" parent="Control/VBoxContainer" unique_id=2076656024]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/VBoxContainer2" unique_id=1349535911]
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/separation = 40
+
+[node name="Exit" type="Button" parent="Control/VBoxContainer2/HBoxContainer" unique_id=2076656024]
+custom_minimum_size = Vector2(290, 130)
+layout_mode = 2
+size_flags_horizontal = 0
+theme_type_variation = &"MainMenuButton"
 text = "Sair"
 
-[connection signal="pressed" from="Control/VBoxContainer/Play" to="." method="_on_play_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Options" to="." method="_on_options_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Credits" to="." method="_on_credits_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer2/HBox/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer2/HBox/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer2/HBox/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer2/HBoxContainer/Exit" to="." method="_on_exit_pressed"]
