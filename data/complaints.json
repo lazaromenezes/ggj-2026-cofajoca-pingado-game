@@ -1,6 +1,6 @@
 [
   {
-	"message": "{employee_name} asks for paid sick leave after showing early symptoms from prolonged exposure during mask testing. They promise full discretion.",
+	"message": "Solicitante: {employee_name} \n Pedido: licença médica. \n Laudo aponta sintomas devido à exposição prolongada a gases tóxicos.",
 	"min_day": 1,
 	"accept_consequences": [
 	  { "target": "WORKERS", "value": 20 },
@@ -8,11 +8,12 @@
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -25 }
-	]
+	],
+	"type": "LETTER"
   },
 
-  {
-	"message": "{employee_name} requests maternal leave following complications during pregnancy. They fear losing their position if they step away now.",
+{
+	"message": "Solicitante: Ana Paula Moreira \n  Pedido: licença maternidade estendida. \n Laudo aponta complicações na gestação, sendo necessário maior tempo para recuperação pós-cirúrgica.",
 	"min_day": 3,
 	"accept_consequences": [
 	  { "target": "WORKERS", "value": 25 },
@@ -20,44 +21,61 @@
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -30 },
-	  { "target": "WORKERS", "value": -3 }
-	]
+	  { "target": "BUDGET", "value": -4 }
+	],
+	"type": "LETTER"
   },
 
   {
-	"message": "{employee_name} quietly asks to be reassigned away from toxin handling after repeated nausea and fainting spells.",
+	"message": "Solicitante: Enrique Navarro \n  Pedido: transferência de função \n Pede reavaliação para ser colocado nuva função na qual não envolva manuseio de toxinas. Reclama de repetidos episódios de náusea e desmaio.",
 	"min_day": 2,
 	"accept_consequences": [
 	  { "target": "WORKERS", "value": 15 },
-	  { "target": "BUDGET", "value": -4 }
+	  { "target": "BUDGET", "value": -2 }
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -18 }
-	]
+	],
+	"type": "LETTER"
+  },
+
+{
+	"message": "Solicitante: Grupo dos funcionários - linha de produção 3 e 4 \n  Pedido: Instalação de bebdouros de água \n Os funcionários pedem pela aquisição de novos bebedouros de água, bem como a instalação destes, como forma de melhoria do ambiente de trabalho na linha de produção.",
+	"min_day": 4,
+	"accept_consequences": [
+	  { "target": "WORKERS", "value": 20 },
+	  { "target": "BUDGET", "value": -5 }
+	],
+	"reject_consequences": [
+	  { "target": "WORKERS", "value": -22 }
+	],
+	"type": "LETTER"
   },
 
   {
-	"message": "{employee_name} admits they’ve been falsifying their stamina reports to avoid punishment. They ask for reduced shifts instead of discipline.",
+	"message": "Departamento de Logística \n Negociação de compra de matéria-prima Lote nº 123 \n Material apresenta boas condições e se encontra dentro das normas exigidas.",
 	"min_day": 4,
 	"accept_consequences": [
-	  { "target": "WORKERS", "value": 12 },
+	  { "target": "WORKERS", "value": 0 },
 	  { "target": "BUDGET", "value": -3 }
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -22 }
-	]
+	],
+	"type": "OFFICIAL"
   },
 
   {
-	"message": "{employee_name} asks for a single unpaid day off to attend a family funeral. They already missed their quota this week.",
+	"message": "Solicitante: {employee_name} \n  Pedido: dia de folga \n pede licença não remunerada de um dia para ir a um funeral de família. Já atingiu o limite de folgas do mês.",
 	"min_day": 1,
 	"accept_consequences": [
 	  { "target": "WORKERS", "value": 10 },
-	  { "target": "BUDGET", "value": -2 }
+	  { "target": "BUDGET", "value": -5 }
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -15 }
-	]
+	],
+	"type": "LETTER"
   },
 
   {
@@ -190,7 +208,7 @@
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "WORKERS", "value": -30 },
+	  { "target": "WORKERS", "value": -30 }
 	]
   },
 
@@ -226,7 +244,7 @@
 	  { "target": "BUDGET", "value": -5 }
 	],
 	"reject_consequences": [
-	  { "target": "WORKERS", "value": -26 },
+	  { "target": "WORKERS", "value": -26 }
 	]
   },
 
@@ -234,7 +252,7 @@
 	"message": "{employee_name} requests access to internal reports after suspecting test data is being altered.",
 	"min_day": 7,
 	"accept_consequences": [
-	  { "target": "WORKERS", "value": 12 },
+	  { "target": "WORKERS", "value": 12 }
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -24 }
@@ -269,10 +287,10 @@
 	"message": "{employee_name} confesses they’ve been documenting internal practices and asks if whistleblower protections apply.",
 	"min_day": 8,
 	"accept_consequences": [
-	  { "target": "WORKERS", "value": 16 },
+	  { "target": "WORKERS", "value": 16 }
 	],
 	"reject_consequences": [
-	  { "target": "WORKERS", "value": -30 },
+	  { "target": "WORKERS", "value": -30 }
 	]
   },
 
@@ -320,7 +338,7 @@
 	  { "target": "BUDGET", "value": -4 }
 	],
 	"reject_consequences": [
-	  { "target": "WORKERS", "value": -26 },
+	  { "target": "WORKERS", "value": -26 }
 	]
   },
 
@@ -328,10 +346,10 @@
 	"message": "{employee_name} asks for written confirmation that the masks sold externally are safe for prolonged exposure.",
 	"min_day": 10,
 	"accept_consequences": [
-	  { "target": "WORKERS", "value": 10 },
+	  { "target": "WORKERS", "value": 10 }
 	],
 	"reject_consequences": [
-	  { "target": "WORKERS", "value": -22 },
+	  { "target": "WORKERS", "value": -22 }
 	]
   },
 
@@ -351,7 +369,7 @@
 	"message": "{employee_name} asks for anonymity after witnessing a supervisor override safety protocols.",
 	"min_day": 7,
 	"accept_consequences": [
-	  { "target": "WORKERS", "value": 14 },
+	  { "target": "WORKERS", "value": 14 }
 	],
 	"reject_consequences": [
 	  { "target": "WORKERS", "value": -25 }
