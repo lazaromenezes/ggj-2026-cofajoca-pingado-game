@@ -1,0 +1,29 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://babeo5vuc1m7q"]
+
+[ext_resource type="Texture2D" uid="uid://dadmuy5g6xpbj" path="res://assets/bg-jogo/obj-notinha/obj-notinha0000.png" id="1_lvrq3"]
+[ext_resource type="Texture2D" uid="uid://dwep6gxh4bkju" path="res://assets/bg-jogo/obj-notinha/obj-notinha0001.png" id="2_a3f1g"]
+[ext_resource type="Texture2D" uid="uid://cv7idyr7f3fyu" path="res://assets/bg-jogo/obj-notinha/obj-notinha0002.png" id="3_jesad"]
+[ext_resource type="Texture2D" uid="uid://sbrexn6xuipu" path="res://assets/bg-jogo/obj-notinha/obj-notinha0003.png" id="4_d5hwy"]
+[ext_resource type="Texture2D" uid="uid://ck36mcdw4xtv" path="res://assets/bg-jogo/obj-notinha/obj-notinha0004.png" id="5_mojm8"]
+[ext_resource type="Texture2D" uid="uid://cob78d7yv6s0p" path="res://assets/bg-jogo/obj-notinha/obj-notinha0005.png" id="6_qfse1"]
+[ext_resource type="Texture2D" uid="uid://cjo6s81m0y1oa" path="res://assets/bg-jogo/obj-notinha/obj-notinha0006.png" id="7_qla7u"]
+[ext_resource type="Texture2D" uid="uid://cvsuldjxpkr70" path="res://assets/bg-jogo/obj-notinha/obj-notinha0007.png" id="8_crxaf"]
+
+[resource]
+frames = 8
+speed_scale = 8.0
+frame_0/texture = ExtResource("1_lvrq3")
+frame_1/texture = ExtResource("2_a3f1g")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_jesad")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_d5hwy")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_mojm8")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_qfse1")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_qla7u")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("8_crxaf")
+frame_7/duration = 1.0

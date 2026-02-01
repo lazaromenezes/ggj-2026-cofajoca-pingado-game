@@ -1,4 +1,4 @@
-class_name CardScene extends Button
+class_name CardScene extends TextureButton
 
 signal card_accepted(consequences: Array[RConsequence])
 signal card_rejected(consequences: Array[RConsequence])
@@ -6,12 +6,14 @@ signal card_rejected(consequences: Array[RConsequence])
 var card: RCard
 var sender: OEmployee
 
+@export var textures: Dictionary[Definitions.SenderType, AnimatedTexture]
+
 @onready var from: Label = %From
 @onready var complaint: RichTextLabel = %Complaint
 @onready var overlay: CanvasLayer = %Overlay
 
-
 func _ready() -> void:
+	texture_normal = textures.values().pick_random()
 	var format_data := {
 		"employee_name": sender.data.name
 	}

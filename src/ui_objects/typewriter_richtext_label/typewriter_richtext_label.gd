@@ -4,9 +4,8 @@ extends RichTextLabel
 
 @export var typing_time: float = 3
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	self.visible_ratio = 0
+	visible_ratio = 0
 
 
 func _on_visibility_changed() -> void:
@@ -17,4 +16,4 @@ func _on_visibility_changed() -> void:
 		tween.tween_callback(sound_effect_player.stop)
 	else:
 		sound_effect_player.stop()
-		self.visible_ratio = 0
+		visible_ratio = 0

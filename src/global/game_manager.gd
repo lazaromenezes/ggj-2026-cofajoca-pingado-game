@@ -6,7 +6,7 @@ signal tracker_changed(tracker: Dictionary[TrackerType, float])
 @export var card_manager: NCardManager
 @export var employee_manager: NEmployeeManager
 
-@export var daily_goal: int = 6
+@export var daily_goal: int = 3
 
 enum TrackerType {
 	TOTAL_PROFIT,

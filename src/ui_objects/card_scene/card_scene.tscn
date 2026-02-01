@@ -1,19 +1,28 @@
 [gd_scene format=3 uid="uid://6lqtladal2uy"]
 
 [ext_resource type="Script" uid="uid://b4ptur5yb6226" path="res://src/ui_objects/card_scene/card_scene.gd" id="1_kub54"]
+[ext_resource type="Texture2D" uid="uid://klribrd04mnl" path="res://assets/bg-jogo/obj-carta/letter_animated_texture.tres" id="1_qxlft"]
+[ext_resource type="Texture2D" uid="uid://h6xe2gj73bwx" path="res://assets/bg-jogo/obj-carta-oficial/oficial_letter_texture.tres" id="2_0bf85"]
 [ext_resource type="Script" uid="uid://ciqqruwrac5ic" path="res://src/ui_objects/card_scene/stamp_area.gd" id="2_3mk1p"]
 [ext_resource type="Texture2D" uid="uid://dt6j4w12sos6f" path="res://assets/overlay/papel-overlay.png" id="2_rla43"]
 [ext_resource type="PackedScene" uid="uid://dtgkixvkljo2s" path="res://src/ui_objects/typewriter_richtext_label/typewriter_richtext_label.tscn" id="2_xd8sg"]
+[ext_resource type="Texture2D" uid="uid://babeo5vuc1m7q" path="res://assets/bg-jogo/obj-notinha/note_texture.tres" id="4_pgjwv"]
 [ext_resource type="Texture2D" uid="uid://n12y8y713wou" path="res://assets/overlay/obj-carimbado-aprovado.png" id="5_5pfj1"]
 [ext_resource type="Texture2D" uid="uid://c825fbokvlnb7" path="res://assets/overlay/obj-carimbado-recusado.png" id="6_72o3u"]
 [ext_resource type="PackedScene" uid="uid://gqeqg6ecptct" path="res://src/ui_objects/stamp_scene/accept_stamp.tscn" id="7_72o3u"]
 [ext_resource type="PackedScene" uid="uid://cw4swvsgxypn4" path="res://src/ui_objects/stamp_scene/reject_stamp.tscn" id="8_qxlft"]
 
-[node name="Card" type="Button" unique_id=417729898]
-offset_right = 63.0
-offset_bottom = 31.0
-text = "[OPEN]"
+[node name="Card" type="TextureButton" unique_id=62405892]
+offset_right = 157.92
+offset_bottom = 163.4
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_kub54")
+textures = Dictionary[int, AnimatedTexture]({
+0: ExtResource("2_0bf85"),
+1: ExtResource("1_qxlft"),
+2: ExtResource("4_pgjwv")
+})
 
 [node name="Overlay" type="CanvasLayer" parent="." unique_id=124854051]
 unique_name_in_owner = true

@@ -5,20 +5,73 @@
 [ext_resource type="Script" uid="uid://doqw2ok0onffd" path="res://src/cards/card_manager.gd" id="2_0xm2m"]
 [ext_resource type="Script" uid="uid://duy545lfru25i" path="res://src/date/date_manager.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cx84f4lwies8m" path="res://src/employees/employee_manager.gd" id="4_1bvp3"]
-[ext_resource type="Script" uid="uid://6r64uks354yi" path="res://src/screens/office/everything_tracker.gd" id="4_orprs"]
+[ext_resource type="Script" path="res://src/screens/office/everything_tracker.gd" id="4_orprs"]
 [ext_resource type="Script" uid="uid://ku4rf8wmsbul" path="res://src/cards/card_parser.gd" id="5_7mycd"]
 [ext_resource type="Script" uid="uid://7d7ir0q2enjr" path="res://src/global/utils.gd" id="5_lquwl"]
 [ext_resource type="Script" uid="uid://bftaa587mx16w" path="res://src/global/game_manager.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cw1hp3fnv0ihr" path="res://src/ui_objects/tracker_scene/tracker_scene.tscn" id="9_kek77"]
+[ext_resource type="Texture2D" uid="uid://cq8885mj786ad" path="res://assets/bg-jogo/img-mesa.png" id="10_cg845"]
+[ext_resource type="Texture2D" uid="uid://b1suovvjllqbd" path="res://assets/bg-jogo/obj-pasta-funcionarios/employees_texture.tres" id="11_8ik23"]
 [ext_resource type="AudioStream" uid="uid://drwcarjp2g3m6" path="res://assets/sfx/hum/ventilation - medium.wav" id="11_ceo3j"]
 [ext_resource type="Texture2D" uid="uid://drqslv7r40gwj" path="res://assets/bg-jogo/bg-layer0-jogo.png" id="11_orprs"]
 [ext_resource type="Script" uid="uid://ccpf5cs2k1cog" path="res://src/screens/office/background.gd" id="11_oscjm"]
+[ext_resource type="Texture2D" uid="uid://bp3urchwe6vld" path="res://assets/bg-jogo/img-mesa-carimbinhos.png" id="12_0q0dy"]
 [ext_resource type="Texture2D" uid="uid://6eerhaq7mcw6" path="res://assets/bg-jogo/bg-layer1-sombra1-jogo.png" id="12_orprs"]
 [ext_resource type="Texture2D" uid="uid://bicsw7qonqgif" path="res://assets/bg-jogo/bg-layer1-sombra2-jogo.png" id="13_b7dkk"]
 [ext_resource type="PackedScene" uid="uid://bp1noeomqsjht" path="res://src/ui_objects/shadow_person/shadow.tscn" id="13_oscjm"]
 [ext_resource type="Texture2D" uid="uid://dc1b4l3m8d2t1" path="res://assets/bg-jogo/bg-layer1-sombra3-jogo.png" id="14_v2ekf"]
 [ext_resource type="Texture2D" uid="uid://dyhn6jcxj3nwg" path="res://assets/bg-jogo/bg-layer2-jogo.png" id="15_0nfi7"]
 [ext_resource type="Texture2D" uid="uid://df1ajovvs82in" path="res://assets/bg-jogo/bg-layer3-jogo.png" id="16_6m026"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qresa"]
+atlas = ExtResource("12_0q0dy")
+region = Rect2(0, 0, 180, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4b5ok"]
+atlas = ExtResource("12_0q0dy")
+region = Rect2(180, 0, 180, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qae54"]
+atlas = ExtResource("12_0q0dy")
+region = Rect2(360, 0, 180, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vjnr2"]
+atlas = ExtResource("12_0q0dy")
+region = Rect2(0, 230, 180, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tfsi"]
+atlas = ExtResource("12_0q0dy")
+region = Rect2(180, 230, 180, 230)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u00oy"]
+atlas = ExtResource("12_0q0dy")
+region = Rect2(360, 230, 180, 230)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_icuty"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qresa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4b5ok")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qae54")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vjnr2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tfsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u00oy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7t1r"]
 atlas = ExtResource("14_v2ekf")
@@ -272,23 +325,45 @@ theme_override_constants/margin_bottom = 20
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer" unique_id=105643637]
 layout_mode = 2
 
-[node name="Desk" type="PanelContainer" parent="UI/MarginContainer/HBoxContainer" unique_id=631908639]
+[node name="Desk" type="TextureRect" parent="UI/MarginContainer/HBoxContainer" unique_id=1179112389]
 custom_minimum_size = Vector2(0, 300)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 8
+texture = ExtResource("10_cg845")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/MarginContainer/HBoxContainer/Desk" unique_id=434896720]
-layout_mode = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 114.0
+offset_right = -72.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="NotesSpace" type="GridContainer" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer" unique_id=1795625194]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_vertical = 4
-theme_override_constants/h_separation = 30
-theme_override_constants/v_separation = 30
-columns = 6
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 3
+
+[node name="Control" type="VBoxContainer" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer" unique_id=831392791]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Employees" type="TextureButton" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer/Control" unique_id=1833800467]
+layout_mode = 2
+texture_normal = ExtResource("11_8ik23")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/MarginContainer/HBoxContainer/Desk/HBoxContainer/Control" unique_id=1801441647]
+position = Vector2(-65, 361)
+sprite_frames = SubResource("SpriteFrames_icuty")
 
 [node name="Tracker" type="CanvasLayer" parent="." unique_id=1824467589]
 layer = 2

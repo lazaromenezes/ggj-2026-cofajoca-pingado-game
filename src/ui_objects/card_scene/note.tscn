@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://bvmmnexg0tknf"]
+
+[ext_resource type="PackedScene" uid="uid://6lqtladal2uy" path="res://src/ui_objects/card_scene/card_scene.tscn" id="1_d8lh3"]
+
+[node name="Note" unique_id=62405892 instance=ExtResource("1_d8lh3")]

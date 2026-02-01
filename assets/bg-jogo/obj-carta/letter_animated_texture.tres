@@ -1,0 +1,29 @@
+[gd_resource type="AnimatedTexture" format=3 uid="uid://klribrd04mnl"]
+
+[ext_resource type="Texture2D" uid="uid://cvyonousepkoc" path="res://assets/bg-jogo/obj-carta/obj-carta0000.png" id="1_54iuq"]
+[ext_resource type="Texture2D" uid="uid://ubujhoj3xah0" path="res://assets/bg-jogo/obj-carta/obj-carta0001.png" id="2_0rqmv"]
+[ext_resource type="Texture2D" uid="uid://fbfjjkw02l7b" path="res://assets/bg-jogo/obj-carta/obj-carta0002.png" id="3_5rusg"]
+[ext_resource type="Texture2D" uid="uid://dalrxojm7eeep" path="res://assets/bg-jogo/obj-carta/obj-carta0003.png" id="4_dla7m"]
+[ext_resource type="Texture2D" uid="uid://dvieb4nnsuuhl" path="res://assets/bg-jogo/obj-carta/obj-carta0004.png" id="5_xaewp"]
+[ext_resource type="Texture2D" uid="uid://dxg540238w5i5" path="res://assets/bg-jogo/obj-carta/obj-carta0005.png" id="6_qfb3n"]
+[ext_resource type="Texture2D" uid="uid://eowoki5p48ou" path="res://assets/bg-jogo/obj-carta/obj-carta0006.png" id="7_7ebu1"]
+[ext_resource type="Texture2D" uid="uid://dbmp3wf5qp1no" path="res://assets/bg-jogo/obj-carta/obj-carta0007.png" id="8_jjar1"]
+
+[resource]
+frames = 8
+speed_scale = 8.0
+frame_0/texture = ExtResource("1_54iuq")
+frame_1/texture = ExtResource("2_0rqmv")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_5rusg")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_dla7m")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_xaewp")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_qfb3n")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_7ebu1")
+frame_6/duration = 1.0
+frame_7/texture = ExtResource("8_jjar1")
+frame_7/duration = 1.0
