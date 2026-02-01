@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dark68cvr2dep" path="res://src/screens/office/office.gd" id="1_3xqf3"]
 [ext_resource type="PackedScene" uid="uid://6lqtladal2uy" path="res://src/ui_objects/card_scene/card_scene.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://doqw2ok0onffd" path="res://src/cards/card_manager.gd" id="2_0xm2m"]
-[ext_resource type="Texture2D" uid="uid://b5le5mejt7psn" path="res://assets/placeholders/b.png" id="3_ceo3j"]
 [ext_resource type="Script" uid="uid://duy545lfru25i" path="res://src/date/date_manager.gd" id="3_h2yge"]
 [ext_resource type="Script" uid="uid://cx84f4lwies8m" path="res://src/employees/employee_manager.gd" id="4_1bvp3"]
 [ext_resource type="Script" uid="uid://6r64uks354yi" path="res://src/screens/office/everything_tracker.gd" id="4_orprs"]
@@ -12,6 +11,208 @@
 [ext_resource type="Script" uid="uid://bftaa587mx16w" path="res://src/global/game_manager.gd" id="7_272bh"]
 [ext_resource type="PackedScene" uid="uid://cw1hp3fnv0ihr" path="res://src/ui_objects/tracker_scene/tracker_scene.tscn" id="9_kek77"]
 [ext_resource type="AudioStream" uid="uid://drwcarjp2g3m6" path="res://assets/sfx/hum/ventilation - medium.wav" id="11_ceo3j"]
+[ext_resource type="Texture2D" uid="uid://drqslv7r40gwj" path="res://assets/bg-jogo/bg-layer0-jogo.png" id="11_orprs"]
+[ext_resource type="Script" uid="uid://ccpf5cs2k1cog" path="res://src/screens/office/background.gd" id="11_oscjm"]
+[ext_resource type="Texture2D" uid="uid://6eerhaq7mcw6" path="res://assets/bg-jogo/bg-layer1-sombra1-jogo.png" id="12_orprs"]
+[ext_resource type="Texture2D" uid="uid://bicsw7qonqgif" path="res://assets/bg-jogo/bg-layer1-sombra2-jogo.png" id="13_b7dkk"]
+[ext_resource type="PackedScene" uid="uid://bp1noeomqsjht" path="res://src/ui_objects/shadow_person/shadow.tscn" id="13_oscjm"]
+[ext_resource type="Texture2D" uid="uid://dc1b4l3m8d2t1" path="res://assets/bg-jogo/bg-layer1-sombra3-jogo.png" id="14_v2ekf"]
+[ext_resource type="Texture2D" uid="uid://dyhn6jcxj3nwg" path="res://assets/bg-jogo/bg-layer2-jogo.png" id="15_0nfi7"]
+[ext_resource type="Texture2D" uid="uid://df1ajovvs82in" path="res://assets/bg-jogo/bg-layer3-jogo.png" id="16_6m026"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7t1r"]
+atlas = ExtResource("14_v2ekf")
+region = Rect2(0, 0, 220, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_06yrl"]
+atlas = ExtResource("14_v2ekf")
+region = Rect2(220, 0, 220, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bunm"]
+atlas = ExtResource("14_v2ekf")
+region = Rect2(0, 430, 220, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5koo"]
+atlas = ExtResource("14_v2ekf")
+region = Rect2(220, 430, 220, 430)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qresa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7t1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_06yrl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bunm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p5koo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cg845"]
+atlas = ExtResource("13_b7dkk")
+region = Rect2(0, 0, 190, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ik23"]
+atlas = ExtResource("13_b7dkk")
+region = Rect2(190, 0, 190, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0q0dy"]
+atlas = ExtResource("13_b7dkk")
+region = Rect2(0, 430, 190, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cv4c0"]
+atlas = ExtResource("13_b7dkk")
+region = Rect2(190, 430, 190, 430)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yarks"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cg845")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ik23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0q0dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cv4c0")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6m026"]
+atlas = ExtResource("12_orprs")
+region = Rect2(0, 0, 225, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oscjm"]
+atlas = ExtResource("12_orprs")
+region = Rect2(225, 0, 225, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bdqb"]
+atlas = ExtResource("12_orprs")
+region = Rect2(0, 430, 225, 430)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_woe58"]
+atlas = ExtResource("12_orprs")
+region = Rect2(225, 430, 225, 430)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cg845"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6m026")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oscjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bdqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_woe58")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yarks"]
+atlas = ExtResource("15_0nfi7")
+region = Rect2(0, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgq0h"]
+atlas = ExtResource("15_0nfi7")
+region = Rect2(1980, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_csq1p"]
+atlas = ExtResource("15_0nfi7")
+region = Rect2(0, 1080, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7nxoe"]
+atlas = ExtResource("15_0nfi7")
+region = Rect2(1980, 1080, 1980, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n2iiv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yarks")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mgq0h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_csq1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7nxoe")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n2iiv"]
+atlas = ExtResource("16_6m026")
+region = Rect2(0, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ok2y6"]
+atlas = ExtResource("16_6m026")
+region = Rect2(1980, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f64ak"]
+atlas = ExtResource("16_6m026")
+region = Rect2(3960, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sonvd"]
+atlas = ExtResource("16_6m026")
+region = Rect2(5940, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8h1j8"]
+atlas = ExtResource("16_6m026")
+region = Rect2(7920, 0, 1980, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_160ll"]
+atlas = ExtResource("16_6m026")
+region = Rect2(9900, 0, 1980, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f7t1r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n2iiv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ok2y6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f64ak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sonvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8h1j8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_160ll")
+}],
+"loop": true,
+"name": &"default",
+"speed": 12.0
+}]
 
 [node name="Office" type="Control" unique_id=1791586412]
 layout_mode = 3
@@ -22,15 +223,6 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3xqf3")
 card_scene = ExtResource("1_ig7tw")
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1805380492]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_ceo3j")
 
 [node name="EverythingTracker" type="Node" parent="." unique_id=82886732 node_paths=PackedStringArray("date_manager")]
 script = ExtResource("4_orprs")
@@ -99,6 +291,7 @@ theme_override_constants/v_separation = 30
 columns = 6
 
 [node name="Tracker" type="CanvasLayer" parent="." unique_id=1824467589]
+layer = 2
 
 [node name="Control" type="Control" parent="Tracker" unique_id=1196165586]
 layout_mode = 3
@@ -129,3 +322,58 @@ game_manager = NodePath("../../../../GameManager")
 [node name="VentilationHum" type="AudioStreamPlayer" parent="." unique_id=1533837735]
 stream = ExtResource("11_ceo3j")
 autoplay = true
+bus = &"Hum"
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=714319147 node_paths=PackedStringArray("animated_sprites")]
+script = ExtResource("11_oscjm")
+animated_sprites = [NodePath("Control/Glass"), NodePath("Control/Wall")]
+
+[node name="Control" type="Control" parent="Background" unique_id=1795516008]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Background/Control" unique_id=1222504459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_orprs")
+metadata/_edit_lock_ = true
+
+[node name="Shadows" type="Control" parent="Background/Control" unique_id=131699157]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Shadow" parent="Background/Control/Shadows" unique_id=1542564135 instance=ExtResource("13_oscjm")]
+position = Vector2(418, 396)
+sprite_frames = SubResource("SpriteFrames_qresa")
+
+[node name="Shadow4" parent="Background/Control/Shadows" unique_id=1078312320 instance=ExtResource("13_oscjm")]
+position = Vector2(996, 415)
+sprite_frames = SubResource("SpriteFrames_yarks")
+
+[node name="Shadow5" parent="Background/Control/Shadows" unique_id=139546376 instance=ExtResource("13_oscjm")]
+position = Vector2(1511, 413)
+sprite_frames = SubResource("SpriteFrames_cg845")
+
+[node name="Glass" type="AnimatedSprite2D" parent="Background/Control" unique_id=540397292]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_n2iiv")
+frame_progress = 0.3404051
+metadata/_edit_lock_ = true
+
+[node name="Wall" type="AnimatedSprite2D" parent="Background/Control" unique_id=1530288961]
+position = Vector2(960, 540)
+sprite_frames = SubResource("SpriteFrames_f7t1r")
+frame_progress = 0.30672574
+metadata/_edit_lock_ = true

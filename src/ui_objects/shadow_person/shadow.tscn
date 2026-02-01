@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bp1noeomqsjht"]
+
+[ext_resource type="Script" uid="uid://jimi78ng0qdc" path="res://src/screens/office/shadow.gd" id="1_qm6u4"]
+
+[node name="Shadow" type="Node2D" unique_id=1542564135]
+script = ExtResource("1_qm6u4")
+
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="." unique_id=2134790258]
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=405284621]
+one_shot = true
+
+[node name="WaitTimer" type="Timer" parent="." unique_id=301280179]
+one_shot = true
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

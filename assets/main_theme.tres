@@ -4,6 +4,9 @@
 [ext_resource type="FontFile" uid="uid://chhe44downdey" path="res://assets/fonts/F25_Executive.otf" id="1_xgdp2"]
 [ext_resource type="FontFile" uid="uid://dy7f2b74gbym4" path="res://assets/fonts/horrendo.ttf" id="2_0arac"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0arac"]
+bg_color = Color(0.43529412, 0.21176471, 0.1764706, 0.6509804)
+
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0arac"]
 content_margin_left = 75.0
 content_margin_top = 75.0
@@ -58,6 +61,8 @@ default_font = ExtResource("1_xgdp2")
 default_font_size = 16
 BaseLabel/base_type = &"Label"
 BaseLabel/colors/font_color = Color(0, 0, 0, 1)
+BrownOverlay/base_type = &"PanelContainer"
+BrownOverlay/styles/panel = SubResource("StyleBoxFlat_0arac")
 Card/base_type = &"PanelContainer"
 Card/styles/panel = SubResource("StyleBoxTexture_0arac")
 CompanyWrittenCard/base_type = &"RichTextLabel"
